@@ -14,8 +14,8 @@
     <style>
         body {
             font-family: 'Inter', 'Kanit', sans-serif;
-            background-color: #E2E8D8;
-            color: #2D3A22;
+            background-color: #E3E8D8;
+            color: #1F2E23;
         }
 
         .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -38,47 +38,47 @@
         }
     </style>
 </head>
-<body class="h-screen w-screen overflow-x-hidden lg:overflow-hidden bg-[#E2E8D8] flex flex-col p-2 sm:p-3 lg:p-3 gap-2 sm:gap-3 selection:bg-[#3E5235] selection:text-white">
+<body class="h-screen w-screen overflow-x-hidden lg:overflow-hidden bg-[#E3E8D8] flex flex-col p-2 sm:p-3 lg:p-3 gap-2 sm:gap-3 selection:bg-[#2C4E3F] selection:text-white">
 
     <!-- Container หลัก เต็มความสูงหน้าจอ -->
     <div class="w-full h-full flex flex-col lg:flex-row gap-3 flex-1 min-h-0">
         
-        <!-- 1. Left Sidebar Navigation (ยืดเต็มความสูงฝั่งซ้ายสุด) -->
-        <aside class="w-full lg:w-[76px] xl:w-[82px] bg-[#3E5235] rounded-[24px] lg:rounded-[32px] p-2.5 lg:py-5 lg:px-2.5 flex flex-row lg:flex-col items-center justify-between gap-3 shrink-0 shadow-lg order-first">
+        <!-- 1. Left Sidebar Navigation (โทนสีเขียวเข้ม #2C4E3F) -->
+        <aside class="w-full lg:w-[76px] xl:w-[82px] bg-[#2C4E3F] rounded-[24px] lg:rounded-[32px] p-2.5 lg:py-5 lg:px-2.5 flex flex-row lg:flex-col items-center justify-between gap-3 shrink-0 shadow-lg order-first">
             <!-- Top Logo -->
-            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-[#9BB684] text-xl lg:text-2xl font-bold shrink-0">
-                <i class="fa-solid fa-leaf"></i>
+            <div class="w-10 h-10 lg:w-12 lg:h-12 rounded-full flex items-center justify-center text-[#B8C8A5] text-xl lg:text-2xl font-bold shrink-0">
+                <i class="fa-solid fa-tooth"></i>
             </div>
             
             <!-- Main Navigation Icons -->
             <div class="flex lg:flex-col items-center gap-2 lg:gap-3 shrink-0">
-                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-[#B2C898] text-[#2D3A22] rounded-full flex items-center justify-center text-base lg:text-lg shadow-sm transition hover:scale-105">
+                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-[#3F6452] text-[#E3E8D8] rounded-full flex items-center justify-center text-base lg:text-lg shadow-sm transition hover:scale-105">
                     <i class="fa-solid fa-house"></i>
                 </button>
-                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
+                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-[#3F6452]/40 text-[#B8C8A5] hover:bg-[#3F6452] hover:text-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
                     <i class="fa-regular fa-calendar-days"></i>
                 </button>
-                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
+                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-[#3F6452]/40 text-[#B8C8A5] hover:bg-[#3F6452] hover:text-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
                     <i class="fa-solid fa-calendar-minus"></i>
                 </button>
-                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
+                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-[#3F6452]/40 text-[#B8C8A5] hover:bg-[#3F6452] hover:text-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
                     <i class="fa-regular fa-file-lines"></i>
                 </button>
-                <button onclick="toggleDrawer()" class="w-9 h-9 lg:w-11 lg:h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
+                <button onclick="toggleDrawer()" class="w-9 h-9 lg:w-11 lg:h-11 bg-[#3F6452]/40 text-[#B8C8A5] hover:bg-[#3F6452] hover:text-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
                     <i class="fa-regular fa-user"></i>
                 </button>
-                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
+                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-[#3F6452]/40 text-[#B8C8A5] hover:bg-[#3F6452] hover:text-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
                     <i class="fa-regular fa-envelope"></i>
                 </button>
             </div>
 
-            <!-- Bottom Settings Icons & Profile -->
+            <!-- Bottom Settings Icons -->
             <div class="flex lg:flex-col items-center gap-2 lg:gap-3 mt-0 lg:mt-auto shrink-0">
-                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
+                <button class="w-9 h-9 lg:w-11 lg:h-11 bg-[#3F6452]/40 text-[#B8C8A5] hover:bg-[#3F6452] hover:text-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
                     <i class="fa-solid fa-gear"></i>
                 </button>
-                <button onclick="toggleDrawer()" class="w-9 h-9 lg:w-11 lg:h-11 rounded-full overflow-hidden border-2 border-white/50 hover:border-white transition hover:scale-105">
-                    <img src="https://images.unsplash.com/photo-1594824813566-7885a39644d6?w=150" alt="Profile" class="w-full h-full object-cover">
+                <button onclick="toggleDrawer()" class="w-9 h-9 lg:w-11 lg:h-11 bg-[#3F6452]/40 text-[#B8C8A5] hover:bg-[#3F6452] hover:text-white rounded-full flex items-center justify-center text-base lg:text-lg transition hover:scale-105">
+                    <i class="fa-solid fa-right-to-bracket"></i>
                 </button>
             </div>
         </aside>
@@ -94,214 +94,141 @@
                     
                     <!-- Header Section -->
                     <div class="space-y-2.5">
-                        <h1 class="text-2xl sm:text-3xl xl:text-4xl font-extrabold text-[#2D3A22] leading-tight tracking-tight">
-                            Welcome Dr. Anantaporn to<br>
+                        <h1 class="text-2xl sm:text-3xl xl:text-4xl font-extrabold text-[#1F2E23] leading-tight tracking-tight">
+                            Welcome to<br>
                             Online Wire Bending &<br>
                             CAD/CAM Training
                         </h1>
 
                         <!-- Category Filters -->
                         <div class="flex items-center gap-2 overflow-x-auto scrollbar-hide py-1">
-                            <button class="flex items-center gap-1.5 bg-[#3E5235] text-white px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:opacity-95 transition">
+                            <button class="flex items-center gap-1.5 bg-[#2C4E3F] text-white px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:opacity-95 transition">
                                 <i class="fa-solid fa-border-all text-[11px]"></i> All
                             </button>
-                            <button class="flex items-center gap-1.5 bg-[#C8D6B9] text-[#2D3A22] px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#BDCBAD] transition">
+                            <button class="flex items-center gap-1.5 bg-[#CAD7B8] text-[#1F2E23] px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#B8C8A5] transition">
                                 <i class="fa-solid fa-wave-square text-[11px]"></i> Wire Bending
                             </button>
-                            <button class="flex items-center gap-1.5 bg-[#C8D6B9] text-[#2D3A22] px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#BDCBAD] transition">
+                            <button class="flex items-center gap-1.5 bg-[#CAD7B8] text-[#1F2E23] px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#B8C8A5] transition">
                                 <i class="fa-solid fa-tooth text-[11px]"></i> CAD/CAM
                             </button>
-                            <button class="flex items-center gap-1.5 bg-[#C8D6B9] text-[#2D3A22] px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#BDCBAD] transition">
+                            <button class="flex items-center gap-1.5 bg-[#CAD7B8] text-[#1F2E23] px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#B8C8A5] transition">
                                 <i class="fa-solid fa-shield-halved text-[11px]"></i> Retention
                             </button>
-                            <button class="flex items-center gap-1.5 bg-[#C8D6B9] text-[#2D3A22] px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#BDCBAD] transition">
+                            <button class="flex items-center gap-1.5 bg-[#CAD7B8] text-[#1F2E23] px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#B8C8A5] transition">
                                 <i class="fa-solid fa-cube text-[11px]"></i> Introductory
                             </button>
                         </div>
                     </div>
 
-                    <!-- Featured Courses Grid (6 Cards / 3 Columns) -->
+                    <!-- Featured Courses Grid -->
                     <div class="flex-1 flex flex-col justify-center min-h-0 pt-1">
-                        <h2 class="text-sm sm:text-base font-bold text-[#2D3A22] mb-2">
-                            Featured Courses / <span class="font-normal text-[#586B4D] text-xs sm:text-sm">หลักสูตรแนะนำ</span>
+                        <h2 class="text-sm sm:text-base font-bold text-[#1F2E23] mb-2">
+                            Featured Courses / <span class="font-normal text-[#4A5D4E] text-xs sm:text-sm">หลักสูตรแนะนำ</span>
                         </h2>
 
-                        <!-- Grid 3x2 -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 flex-1 min-h-0">
+                        <!-- Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1 min-h-0">
                             
                             <!-- Card 1 -->
-                            <div class="bg-[#C8D6B9] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[175px]">
+                            <div class="bg-[#B8C8A5] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[170px]">
                                 <div class="flex justify-between items-start">
-                                    <span class="text-xl text-[#3E5235]"><i class="fa-solid fa-wave-square"></i></span>
+                                    <span class="text-xl text-[#2C4E3F]"><i class="fa-solid fa-wave-square"></i></span>
                                 </div>
                                 
                                 <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-                                    <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-white/40">
-                                        ★ 4.8
-                                    </span>
                                     <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300" alt="Course" class="w-24 sm:w-28 h-16 sm:h-18 object-cover rounded-xl border border-white/50 shadow-sm mt-0.5">
                                 </div>
                                 
                                 <div class="pr-28 sm:pr-32 mt-1">
-                                    <h3 class="font-bold text-xs sm:text-sm text-[#2D3A22] leading-tight mb-1">
+                                    <h3 class="font-bold text-xs sm:text-sm text-[#1F2E23] leading-tight mb-1">
                                         Wire Bending:<br>Basic to Advanced
                                     </h3>
-                                    <p class="text-[11px] text-[#4E6142] font-medium leading-tight">การดัดลวดพื้นฐานและขั้นสูง</p>
+                                    <p class="text-[11px] text-[#3D5243] font-medium leading-tight">การดัดลวดพื้นฐานและขั้นสูง</p>
                                 </div>
 
                                 <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-[11px] text-[#4E6142] font-semibold">24 Lessons</span>
+                                    <span class="text-[11px] text-[#3D5243] font-semibold">24 Lessons</span>
                                     <div class="flex -space-x-1.5">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#B8C8A5] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border border-[#B8C8A5] object-cover">
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 2 -->
-                            <div class="bg-[#C8D6B9] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[175px]">
+                            <div class="bg-[#B8C8A5] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[170px]">
                                 <div class="flex justify-between items-start">
-                                    <span class="text-xl text-[#3E5235]"><i class="fa-solid fa-tooth"></i></span>
+                                    <span class="text-xl text-[#2C4E3F]"><i class="fa-solid fa-tooth"></i></span>
                                 </div>
                                 
                                 <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-                                    <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-white/40">
-                                        ★ 4.9
-                                    </span>
                                     <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=300" alt="Course" class="w-24 sm:w-28 h-16 sm:h-18 object-cover rounded-xl border border-white/50 shadow-sm mt-0.5">
                                 </div>
                                 
                                 <div class="pr-28 sm:pr-32 mt-1">
-                                    <h3 class="font-bold text-xs sm:text-sm text-[#2D3A22] leading-tight mb-1">
+                                    <h3 class="font-bold text-xs sm:text-sm text-[#1F2E23] leading-tight mb-1">
                                         Digital Dentistry:<br>CAD/CAM for Retainers
                                     </h3>
-                                    <p class="text-[11px] text-[#4E6142] font-medium leading-tight">เทคโนโลยี CAD/CAM สำหรับรีเทนเนอร์</p>
+                                    <p class="text-[11px] text-[#3D5243] font-medium leading-tight">เทคโนโลยี CAD/CAM สำหรับรีเทนเนอร์</p>
                                 </div>
 
                                 <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-[11px] text-[#4E6142] font-semibold">16 Lessons</span>
+                                    <span class="text-[11px] text-[#3D5243] font-semibold">16 Lessons</span>
                                     <div class="flex -space-x-1.5">
-                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 rounded-full border border-[#B8C8A5] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-5 h-5 rounded-full border border-[#B8C8A5] object-cover">
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 3 -->
-                            <div class="bg-[#C8D6B9] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[175px]">
+                            <div class="bg-[#B8C8A5] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[170px]">
                                 <div class="flex justify-between items-start">
-                                    <span class="text-xl text-[#3E5235]"><i class="fa-solid fa-cubes"></i></span>
+                                    <span class="text-xl text-[#2C4E3F]"><i class="fa-solid fa-cubes"></i></span>
                                 </div>
                                 
                                 <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-                                    <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-white/40">
-                                        ★ 4.9
-                                    </span>
                                     <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=300" alt="Course" class="w-24 sm:w-28 h-16 sm:h-18 object-cover rounded-xl border border-white/50 shadow-sm mt-0.5">
                                 </div>
                                 
                                 <div class="pr-28 sm:pr-32 mt-1">
-                                    <h3 class="font-bold text-xs sm:text-sm text-[#2D3A22] leading-tight mb-1">
+                                    <h3 class="font-bold text-xs sm:text-sm text-[#1F2E23] leading-tight mb-1">
                                         Practical Skills:<br>All Types of Retainers
                                     </h3>
-                                    <p class="text-[11px] text-[#4E6142] font-medium leading-tight">การทำรีเทนเนอร์ทุกประเภท</p>
+                                    <p class="text-[11px] text-[#3D5243] font-medium leading-tight">การทำรีเทนเนอร์ทุกประเภท</p>
                                 </div>
 
                                 <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-[11px] text-[#4E6142] font-semibold">30 Lessons</span>
+                                    <span class="text-[11px] text-[#3D5243] font-semibold">30 Lessons</span>
                                     <div class="flex -space-x-1.5">
-                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-5 h-5 rounded-full border border-[#B8C8A5] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-5 h-5 rounded-full border border-[#B8C8A5] object-cover">
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 4 -->
-                            <div class="bg-[#C8D6B9] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[175px]">
+                            <div class="bg-[#B8C8A5] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[170px]">
                                 <div class="flex justify-between items-start">
-                                    <span class="text-xl text-[#3E5235]"><i class="fa-solid fa-cube"></i></span>
+                                    <span class="text-xl text-[#2C4E3F]"><i class="fa-solid fa-cube"></i></span>
                                 </div>
                                 
                                 <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-                                    <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-white/40">
-                                        ★ 4.9
-                                    </span>
                                     <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300" alt="Course" class="w-24 sm:w-28 h-16 sm:h-18 object-cover rounded-xl border border-white/50 shadow-sm mt-0.5">
                                 </div>
                                 
                                 <div class="pr-28 sm:pr-32 mt-1">
-                                    <h3 class="font-bold text-xs sm:text-sm text-[#2D3A22] leading-tight mb-1">
+                                    <h3 class="font-bold text-xs sm:text-sm text-[#1F2E23] leading-tight mb-1">
                                         Advanced Techniques
                                     </h3>
-                                    <p class="text-[11px] text-[#4E6142] font-medium leading-tight">เทคนิคขั้นสูง</p>
+                                    <p class="text-[11px] text-[#3D5243] font-medium leading-tight">เทคนิคขั้นสูง</p>
                                 </div>
 
                                 <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-[11px] text-[#4E6142] font-semibold">16 Lessons</span>
+                                    <span class="text-[11px] text-[#3D5243] font-semibold">16 Lessons</span>
                                     <div class="flex -space-x-1.5">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 5 (เพิ่มตามรูปภาพ) -->
-                            <div class="bg-[#C8D6B9] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[175px]">
-                                <div class="flex justify-between items-start">
-                                    <span class="text-xl text-[#3E5235]"><i class="fa-solid fa-teeth-open"></i></span>
-                                </div>
-                                
-                                <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-                                    <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-white/40">
-                                        ★ 4.7
-                                    </span>
-                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300" alt="Course" class="w-24 sm:w-28 h-16 sm:h-18 object-cover rounded-xl border border-white/50 shadow-sm mt-0.5">
-                                </div>
-                                
-                                <div class="pr-28 sm:pr-32 mt-1">
-                                    <h3 class="font-bold text-xs sm:text-sm text-[#2D3A22] leading-tight mb-1">
-                                        Orthodontic Brackets /
-                                    </h3>
-                                    <p class="text-[11px] text-[#4E6142] font-medium leading-tight">เครื่องมือจัดฟัน</p>
-                                </div>
-
-                                <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-[11px] text-[#4E6142] font-semibold">4.7 Lessons</span>
-                                    <div class="flex -space-x-1.5">
-                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Card 6 (เพิ่มตามรูปภาพ) -->
-                            <div class="bg-[#C8D6B9] p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[175px]">
-                                <div class="flex justify-between items-start">
-                                    <span class="text-xl text-[#3E5235]"><i class="fa-solid fa-microscope"></i></span>
-                                </div>
-                                
-                                <div class="absolute top-3 right-3 flex flex-col items-end gap-1">
-                                    <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5 shadow-sm border border-white/40">
-                                        ★ 4.8
-                                    </span>
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300" alt="Course" class="w-24 sm:w-28 h-16 sm:h-18 object-cover rounded-xl border border-white/50 shadow-sm mt-0.5">
-                                </div>
-                                
-                                <div class="pr-28 sm:pr-32 mt-1">
-                                    <h3 class="font-bold text-xs sm:text-sm text-[#2D3A22] leading-tight mb-1">
-                                        Lab Operations & Management /
-                                    </h3>
-                                    <p class="text-[11px] text-[#4E6142] font-medium leading-tight">การจัดการห้องปฏิบัติการ</p>
-                                </div>
-
-                                <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-[11px] text-[#4E6142] font-semibold">4.8 Lessons</span>
-                                    <div class="flex -space-x-1.5">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-5 h-5 rounded-full border border-[#C8D6B9] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border border-[#B8C8A5] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#B8C8A5] object-cover">
                                     </div>
                                 </div>
                             </div>
@@ -310,32 +237,45 @@
                     </div>
                 </main>
 
-                <!-- 3. Right Sidebar Area (ขวาสุด) -->
-                <aside class="w-full lg:w-[320px] xl:w-[350px] bg-[#C8D6B9] p-3.5 rounded-[28px] lg:rounded-[32px] flex flex-col justify-between space-y-3 shrink-0 overflow-y-auto scrollbar-hide shadow-sm">
+                <!-- 3. Right Sidebar Area (โทนสีเขียวอ่อนอ่อน) -->
+                <aside class="w-full lg:w-[310px] xl:w-[340px] bg-[#CAD7B8] p-3.5 rounded-[28px] lg:rounded-[32px] flex flex-col justify-between space-y-3 shrink-0 overflow-y-auto scrollbar-hide shadow-sm">
                     
-                    <!-- User Profile Box -->
+                    <!-- Guest User Profile Box -->
                     <div class="flex flex-col items-center pt-1">
                         <div class="w-full flex justify-between items-center mb-1">
-                            <button class="text-[#3E5235] hover:text-black transition text-base p-1"><i class="fa-regular fa-bell"></i></button>
-                            <button class="text-[#3E5235] hover:text-black transition text-base p-1"><i class="fa-solid fa-gear"></i></button>
+                            <button class="text-[#2C4E3F] hover:text-black transition text-base p-1"><i class="fa-regular fa-bell"></i></button>
+                            <button class="text-[#2C4E3F] hover:text-black transition text-base p-1"><i class="fa-solid fa-gear"></i></button>
                         </div>
                         
-                        <img src="https://images.unsplash.com/photo-1594824813566-7885a39644d6?w=200" alt="Doctor" class="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover mb-2 border-2 border-white shadow-md">
-                        <h3 class="text-sm sm:text-base font-bold text-[#2D3A22]">Dr. Anantaporn</h3>
-                        <p class="text-[11px] text-[#586B4D] mb-3 font-medium">Your Profile</p>
+                        <!-- Guest Avatar -->
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center text-[#2C4E3F] text-2xl sm:text-3xl mb-2 border-2 border-white shadow-sm">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3 class="text-sm sm:text-base font-bold text-[#1F2E23]">Guest User</h3>
+                        <p class="text-[11px] text-[#4A5D4E] mb-3 font-medium">กรุณาเข้าสู่ระบบเพื่อเรียนต่อ</p>
 
-                        <div class="w-full bg-white/90 backdrop-blur-sm p-2.5 rounded-2xl flex items-center justify-between shadow-sm">
+                        <!-- Log In & Sign In Buttons (ตรงตามภาพใหม่) -->
+                        <div class="w-full grid grid-cols-2 gap-2 mb-3">
+                            <button onclick="toggleDrawer()" class="bg-[#2C4E3F] text-white py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 shadow-sm hover:bg-[#233F33] transition">
+                                <i class="fa-solid fa-right-to-bracket text-[11px]"></i> Log In
+                            </button>
+                            <button onclick="toggleDrawer()" class="bg-white text-[#2C4E3F] py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 shadow-sm hover:bg-gray-50 transition">
+                                <i class="fa-solid fa-user-plus text-[11px]"></i> Sign In
+                            </button>
+                        </div>
+
+                        <!-- Colleagues Bar -->
+                        <div class="w-full bg-white/80 backdrop-blur-sm p-2.5 rounded-2xl flex items-center justify-between shadow-sm">
                             <div class="flex items-center gap-2">
-                                <i class="fa-solid fa-user-group text-[#3E5235] text-xs"></i>
-                                <span class="text-xs font-bold text-[#2D3A22]">274 Colleagues</span>
+                                <i class="fa-solid fa-user-group text-[#2C4E3F] text-xs"></i>
+                                <span class="text-xs font-bold text-[#1F2E23]">274 Colleagues</span>
                             </div>
                             <div class="flex items-center gap-1">
                                 <div class="flex -space-x-1.5">
                                     <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-4 h-4 rounded-full object-cover border border-white">
                                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-4 h-4 rounded-full object-cover border border-white">
-                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-4 h-4 rounded-full object-cover border border-white">
                                 </div>
-                                <i class="fa-solid fa-chevron-right text-[10px] text-[#586B4D] ml-0.5"></i>
+                                <i class="fa-solid fa-chevron-right text-[10px] text-[#4A5D4E] ml-0.5"></i>
                             </div>
                         </div>
                     </div>
@@ -344,68 +284,68 @@
                     <div class="bg-white/90 backdrop-blur-sm p-3.5 rounded-[22px] shadow-sm">
                         <div class="flex justify-between items-center mb-2">
                             <div>
-                                <span class="text-[11px] text-[#586B4D] block font-medium">Activity</span>
+                                <span class="text-[11px] text-[#4A5D4E] block font-medium">Activity</span>
                                 <div class="flex items-center gap-1.5 mt-0.5">
-                                    <span class="text-lg font-extrabold text-[#2D3A22]">3.5h</span>
-                                    <span class="bg-[#D8E4C9] text-[#2D3A22] text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                    <span class="text-lg font-extrabold text-[#1F2E23]">3.5h</span>
+                                    <span class="bg-[#D8E4C9] text-[#1F2E23] text-[10px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
                                         👏 Practice Hours
                                     </span>
                                 </div>
                             </div>
-                            <button class="text-[11px] border border-gray-300 bg-white px-2 py-0.5 rounded-lg text-[#2D3A22] flex items-center gap-1 shadow-sm font-medium">
+                            <button class="text-[11px] border border-gray-300 bg-white px-2 py-0.5 rounded-lg text-[#1F2E23] flex items-center gap-1 shadow-sm font-medium">
                                 Year <i class="fa-solid fa-chevron-down text-[8px]"></i>
                             </button>
                         </div>
 
-                        <!-- Custom Bar Chart -->
+                        <!-- Bar Chart -->
                         <div class="flex items-end justify-between h-20 pt-3 px-1 gap-1">
                             <div class="flex flex-col items-center gap-1 flex-1">
-                                <div class="w-full bg-[#B2C898] rounded-full h-10"></div>
-                                <span class="text-[9px] text-[#586B4D] font-medium">Jan</span>
+                                <div class="w-full bg-[#B8C8A5] rounded-full h-10"></div>
+                                <span class="text-[9px] text-[#4A5D4E] font-medium">Jan</span>
                             </div>
                             <div class="flex flex-col items-center gap-1 flex-1">
-                                <div class="w-full bg-[#3E5235] rounded-full h-14"></div>
-                                <span class="text-[9px] text-[#586B4D] font-medium">Jan</span>
+                                <div class="w-full bg-[#2C4E3F] rounded-full h-14"></div>
+                                <span class="text-[9px] text-[#4A5D4E] font-medium">Jan</span>
                             </div>
                             <div class="flex flex-col items-center gap-1 flex-1">
-                                <div class="w-full bg-[#B2C898] rounded-full h-8"></div>
-                                <span class="text-[9px] text-[#586B4D] font-medium">Aug</span>
+                                <div class="w-full bg-[#B8C8A5] rounded-full h-8"></div>
+                                <span class="text-[9px] text-[#4A5D4E] font-medium">Aug</span>
                             </div>
                             <div class="flex flex-col items-center gap-1 flex-1">
-                                <div class="w-full bg-[#3E5235] rounded-full h-16"></div>
-                                <span class="text-[9px] text-[#586B4D] font-medium">Sep</span>
+                                <div class="w-full bg-[#2C4E3F] rounded-full h-16"></div>
+                                <span class="text-[9px] text-[#4A5D4E] font-medium">Sep</span>
                             </div>
                             <div class="flex flex-col items-center gap-1 flex-1">
-                                <div class="w-full bg-[#B2C898] rounded-full h-7"></div>
-                                <span class="text-[9px] text-[#586B4D] font-medium">Oct</span>
+                                <div class="w-full bg-[#B8C8A5] rounded-full h-7"></div>
+                                <span class="text-[9px] text-[#4A5D4E] font-medium">Oct</span>
                             </div>
                             <div class="flex flex-col items-center gap-1 flex-1">
-                                <div class="w-full bg-[#B2C898]/60 rounded-full h-5"></div>
-                                <span class="text-[9px] text-[#586B4D] font-medium">Nov</span>
+                                <div class="w-full bg-[#B8C8A5]/60 rounded-full h-5"></div>
+                                <span class="text-[9px] text-[#4A5D4E] font-medium">Nov</span>
                             </div>
                             <div class="flex flex-col items-center gap-1 flex-1">
-                                <div class="w-full bg-[#3E5235] rounded-full h-14 relative flex items-center justify-center">
-                                    <div class="absolute -top-0.5 w-full bg-[#B2C898] h-5 rounded-t-full"></div>
+                                <div class="w-full bg-[#2C4E3F] rounded-full h-14 relative flex items-center justify-center">
+                                    <div class="absolute -top-0.5 w-full bg-[#B8C8A5] h-5 rounded-t-full"></div>
                                 </div>
-                                <span class="text-[9px] bg-[#3E5235] text-white px-1 py-0.2 rounded-full font-medium">Dec</span>
+                                <span class="text-[9px] bg-[#2C4E3F] text-white px-1 py-0.2 rounded-full font-medium">Dec</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Your Courses List -->
                     <div>
-                        <h3 class="text-xs font-bold text-[#2D3A22] mb-2">
-                            Your Courses / <span class="font-normal text-[#586B4D]">หลักสูตรของคุณ</span>
+                        <h3 class="text-xs font-bold text-[#1F2E23] mb-2">
+                            Your Courses / <span class="font-normal text-[#4A5D4E]">หลักสูตรของคุณ</span>
                         </h3>
                         <div class="space-y-2">
                             <!-- Course Item 1 -->
                             <div class="bg-white/80 p-2 rounded-xl flex items-center gap-2.5 shadow-sm border border-white/50">
                                 <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-10 h-10 rounded-lg object-cover shrink-0">
                                 <div class="flex-1 min-w-0">
-                                    <h4 class="text-xs font-bold text-[#2D3A22] leading-tight truncate">Wire Bending: Basic to</h4>
-                                    <p class="text-[10px] font-normal text-[#586B4D] truncate">การดัดลวดพื้นฐานและขั้นสูง</p>
+                                    <h4 class="text-xs font-bold text-[#1F2E23] leading-tight truncate">Wire Bending: Basic to</h4>
+                                    <p class="text-[10px] font-normal text-[#4A5D4E] truncate">การดัดลวดพื้นฐานและขั้นสูง</p>
                                     <div class="w-full bg-gray-200 h-1 rounded-full mt-1 overflow-hidden">
-                                        <div class="bg-[#3E5235] h-full w-3/4 rounded-full"></div>
+                                        <div class="bg-[#2C4E3F] h-full w-3/4 rounded-full"></div>
                                     </div>
                                 </div>
                             </div>
@@ -414,19 +354,11 @@
                             <div class="bg-white/80 p-2 rounded-xl flex items-center gap-2.5 shadow-sm border border-white/50">
                                 <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-10 h-10 rounded-lg object-cover shrink-0">
                                 <div class="flex-1 min-w-0">
-                                    <h4 class="text-xs font-bold text-[#2D3A22] leading-tight truncate">Digital Dentistry: CAD/CAM</h4>
-                                    <p class="text-[10px] font-normal text-[#586B4D] truncate">for Retainers</p>
+                                    <h4 class="text-xs font-bold text-[#1F2E23] leading-tight truncate">Digital Dentistry: CAD/CAM</h4>
+                                    <p class="text-[10px] font-normal text-[#4A5D4E] truncate">สำหรับรีเทนเนอร์</p>
                                     <div class="w-full bg-gray-200 h-1 rounded-full mt-1 overflow-hidden">
-                                        <div class="bg-[#3E5235] h-full w-1/2 rounded-full"></div>
+                                        <div class="bg-[#2C4E3F] h-full w-1/2 rounded-full"></div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Course Item 3 -->
-                            <div class="bg-white/80 p-2 rounded-xl flex items-center gap-2.5 shadow-sm border border-white/50 opacity-80">
-                                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=150" class="w-10 h-10 rounded-lg object-cover shrink-0">
-                                <div class="flex-1 min-w-0">
-                                    <h4 class="text-xs font-bold text-[#2D3A22] leading-tight truncate">CAD/CAM</h4>
                                 </div>
                             </div>
                         </div>
@@ -435,31 +367,32 @@
 
             </div>
 
-            <!-- 4. Footer Section (ด้านล่างแนบเต็มความกว้าง) -->
-            <footer class="w-full bg-[#3E5235] text-white p-2 px-4 lg:px-6 text-[11px] flex flex-col sm:flex-row justify-between items-center gap-2 rounded-xl lg:rounded-2xl shrink-0 shadow-md">
+            <!-- 4. Footer Section (สีเขียวเข้ม #2C4E3F) -->
+            <footer class="w-full bg-[#2C4E3F] text-white p-2 px-4 lg:px-6 text-[11px] flex flex-col sm:flex-row justify-between items-center gap-2 rounded-xl lg:rounded-2xl shrink-0 shadow-md">
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-                    <a href="#" class="flex items-center gap-1 hover:text-[#B2C898] transition"><i class="fa-solid fa-phone text-[10px]"></i> Resources</a>
-                    <a href="#" class="flex items-center gap-1 hover:text-[#B2C898] transition"><i class="fa-regular fa-user text-[10px]"></i> Profile</a>
-                    <a href="#" class="flex items-center gap-1 hover:text-[#B2C898] transition">Contact</a>
+                    <a href="#" class="flex items-center gap-1 hover:text-[#B8C8A5] transition"><i class="fa-solid fa-phone text-[10px]"></i> Contact info</a>
+                    <a href="#" class="flex items-center gap-1 hover:text-[#B8C8A5] transition"><i class="fa-regular fa-envelope text-[10px]"></i> Resources</a>
+                    <a href="#" class="flex items-center gap-1 hover:text-[#B8C8A5] transition"><i class="fa-regular fa-user text-[10px]"></i> Profile</a>
+                    <a href="#" class="flex items-center gap-1 hover:text-[#B8C8A5] transition">Contact</a>
                 </div>
                 <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                     <span>04182244005</span>
                     <span class="flex items-center gap-1"><i class="fa-solid fa-globe text-[10px]"></i> Dental Labform</span>
                 </div>
-                <div class="text-white/70">© KP Dental Labform</div>
+                <div class="text-white/80">© KP Dental Labform</div>
             </footer>
 
         </div>
 
     </div>
 
-    <!-- 5. Slide-in Drawer -->
+    <!-- Slide-in Drawer สำหรับ Sign In / Log In -->
     <div id="drawerOverlay" onclick="toggleDrawer()" class="fixed inset-0 bg-black/50 z-40"></div>
     <div id="loginDrawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
         <div>
             <div class="flex justify-between items-center mb-6">
-                <div class="flex items-center gap-2 text-[#2D3A22] font-bold text-lg sm:text-xl">
-                    <i class="fa-solid fa-tooth text-2xl text-[#3E5235]"></i> KP Dental
+                <div class="flex items-center gap-2 text-[#1F2E23] font-bold text-lg sm:text-xl">
+                    <i class="fa-solid fa-tooth text-2xl text-[#2C4E3F]"></i> KP Dental
                 </div>
                 <button onclick="toggleDrawer()" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 flex items-center justify-center transition">
                     <i class="fa-solid fa-xmark text-sm"></i>
@@ -467,36 +400,36 @@
             </div>
 
             <div class="mb-6">
-                <h2 class="text-2xl font-bold text-[#2D3A22] mb-1">Welcome Back!</h2>
+                <h2 class="text-2xl font-bold text-[#1F2E23] mb-1">Welcome Back!</h2>
                 <p class="text-xs text-gray-500">กรุณากรอกข้อมูลเพื่อเข้าสู่ระบบเรียนออนไลน์</p>
             </div>
 
             <form onsubmit="event.preventDefault(); alert('เข้าสู่ระบบสำเร็จ!'); toggleDrawer();" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-semibold text-[#2D3A22] mb-1.5">Email / Username</label>
+                    <label class="block text-xs font-semibold text-[#1F2E23] mb-1.5">Email / Username</label>
                     <div class="relative">
                         <i class="fa-regular fa-envelope absolute left-3 top-3.5 text-gray-400 text-sm"></i>
-                        <input type="email" required placeholder="example@dentallab.com" class="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#3E5235]">
+                        <input type="email" required placeholder="example@dentallab.com" class="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#2C4E3F]">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-[#2D3A22] mb-1.5">Password</label>
+                    <label class="block text-xs font-semibold text-[#1F2E23] mb-1.5">Password</label>
                     <div class="relative">
                         <i class="fa-solid fa-lock absolute left-3 top-3.5 text-gray-400 text-sm"></i>
-                        <input type="password" required placeholder="••••••••" class="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#3E5235]">
+                        <input type="password" required placeholder="••••••••" class="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#2C4E3F]">
                     </div>
                 </div>
 
                 <div class="flex justify-between items-center text-xs pt-1">
                     <label class="flex items-center gap-1.5 text-gray-600 cursor-pointer">
-                        <input type="checkbox" class="rounded border-gray-300 text-[#3E5235] focus:ring-[#3E5235]">
+                        <input type="checkbox" class="rounded border-gray-300 text-[#2C4E3F] focus:ring-[#2C4E3F]">
                         <span>Remember me</span>
                     </label>
-                    <a href="#" class="text-[#3E5235] font-semibold hover:underline">Forgot password?</a>
+                    <a href="#" class="text-[#2C4E3F] font-semibold hover:underline">Forgot password?</a>
                 </div>
 
-                <button type="submit" class="w-full bg-[#3E5235] text-white font-medium text-xs sm:text-sm py-3 rounded-xl shadow-md mt-3 hover:bg-[#34452C] transition">
+                <button type="submit" class="w-full bg-[#2C4E3F] text-white font-medium text-xs sm:text-sm py-3 rounded-xl shadow-md mt-3 hover:bg-[#233F33] transition">
                     Log In
                 </button>
             </form>
@@ -507,7 +440,7 @@
                 <div class="h-[1px] bg-gray-200 flex-1"></div>
             </div>
 
-            <button onclick="alert('สมัครสมาชิก');" class="w-full bg-[#B2C898] text-[#2D3A22] font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2 shadow-sm hover:bg-[#A3BB87]">
+            <button onclick="alert('สมัครสมาชิก');" class="w-full bg-[#B8C8A5] text-[#1F2E23] font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2 shadow-sm hover:bg-[#A8B993]">
                 <i class="fa-solid fa-user-plus text-xs"></i> Create New Account (Sign In)
             </button>
         </div>
