@@ -40,11 +40,11 @@
 </head>
 <body class="h-full bg-[#E2E8D8] flex flex-col justify-between p-3 lg:p-4 gap-3 relative overflow-x-hidden selection:bg-[#3E5235] selection:text-white">
 
-    <!-- Container หลัก -->
+    <!-- Container หลัก (Sidebar อยู่ซ้ายสุด) -->
     <div class="w-full mx-auto flex flex-col lg:flex-row gap-4 flex-1 h-full min-h-0 max-w-[1600px]">
         
-        <!-- 1. Left Sidebar Navigation -->
-        <aside class="w-full lg:w-[84px] bg-[#3E5235] rounded-[32px] p-3 lg:py-6 lg:px-3 flex flex-row lg:flex-col items-center justify-between gap-4 shrink-0 shadow-lg">
+        <!-- 1. Left Sidebar Navigation (ย้ายมาไว้ซ้ายสุด) -->
+        <aside class="w-full lg:w-[84px] bg-[#3E5235] rounded-[32px] p-3 lg:py-6 lg:px-3 flex flex-row lg:flex-col items-center justify-between gap-4 shrink-0 shadow-lg order-first">
             <!-- Top Logo -->
             <div class="w-12 h-12 rounded-full flex items-center justify-center text-[#9BB684] text-2xl font-bold shrink-0">
                 <i class="fa-solid fa-leaf"></i>
@@ -83,7 +83,7 @@
             </div>
         </aside>
 
-        <!-- 2. Main Content Area -->
+        <!-- 2. Main Content Area (อยู่ตรงกลาง) -->
         <main class="flex-1 flex flex-col justify-between space-y-4 min-h-0 overflow-y-auto scrollbar-hide pr-1">
             
             <!-- Header Section -->
@@ -246,7 +246,7 @@
             </div>
         </main>
 
-        <!-- 3. Right Sidebar Area -->
+        <!-- 3. Right Sidebar Area (อยู่ขวาสุด) -->
         <aside class="w-full lg:w-[360px] xl:w-[380px] bg-[#C8D6B9] p-4 rounded-[32px] flex flex-col justify-between space-y-4 shrink-0 overflow-y-auto scrollbar-hide shadow-sm">
             
             <!-- User Profile Box -->
@@ -358,7 +358,7 @@
                         </div>
                     </div>
 
-                    <!-- Course Item 3 (Bottom Cutoff Peek) -->
+                    <!-- Course Item 3 -->
                     <div class="bg-white/80 p-2.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white/50 opacity-80">
                         <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=150" class="w-12 h-12 rounded-xl object-cover shrink-0">
                         <div class="flex-1 min-w-0">
