@@ -14,25 +14,25 @@
     <style>
         body {
             font-family: 'Inter', 'Kanit', sans-serif;
-            background-color: #C3C6B1 !important;
+            background-color: #E8EAE0 !important;
             color: #3A482E;
         }
 
-        /* Custom Colors */
+        /* Custom Colors - Updated to match image 2 */
         .bg-nav-dark { background-color: #3A482E !important; }
         .bg-nav-medium { background-color: #487564 !important; }
-        .bg-main-light { background-color: #C3C6B1 !important; }
+        .bg-main-light { background-color: #E8EAE0 !important; }
         .bg-card-white { background-color: #FFFFFF !important; }
         
         .text-dark-heading { color: #3A482E !important; }
         .text-sub-heading { color: #4B553A !important; }
-        .text-pastel-light { color: #C3C6B1 !important; }
-        .text-highlight { color: #B8D088 !important; }
+        .text-pastel-light { color: #E8EAE0 !important; }
+        .text-highlight { color: #A8C85D !important; }
         .text-icon-muted { color: #79958C !important; }
 
         /* Buttons */
         .btn-primary {
-            background-color: #B8D088 !important;
+            background-color: #A8C85D !important;
             color: #3A482E !important;
         }
         .btn-primary:hover { opacity: 0.9; }
@@ -76,8 +76,8 @@
         <!-- 1. Left Sidebar Navigation -->
         <aside class="w-full lg:w-[88px] bg-nav-dark rounded-[28px] p-2.5 lg:py-5 lg:px-2.5 flex flex-row lg:flex-col items-center justify-between gap-3.5 shrink-0 shadow-md">
             <!-- Top Logo -->
-            <div class="w-11 h-11 rounded-full flex items-center justify-center text-[#B8D088] text-xl font-bold shrink-0">
-                <i class="fa-solid fa-tooth"></i>
+            <div class="w-11 h-11 rounded-full flex items-center justify-center text-[#A8C85D] text-xl font-bold shrink-0">
+                <i class="fa-solid fa-leaf"></i>
             </div>
             
             <!-- Main Navigation Icons -->
@@ -85,29 +85,29 @@
                 <button class="w-11 h-11 btn-primary rounded-full flex items-center justify-center text-base shadow-sm transition">
                     <i class="fa-solid fa-house"></i>
                 </button>
-                <button class="w-11 h-11 bg-white/10 text-[#C3C6B1] hover:text-[#B8D088] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
                     <i class="fa-regular fa-calendar-days"></i>
                 </button>
-                <button class="w-11 h-11 bg-white/10 text-[#C3C6B1] hover:text-[#B8D088] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
                     <i class="fa-solid fa-calendar-minus"></i>
                 </button>
-                <button class="w-11 h-11 bg-white/10 text-[#C3C6B1] hover:text-[#B8D088] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
                     <i class="fa-regular fa-file-lines"></i>
                 </button>
-                <button onclick="toggleDrawer()" class="w-11 h-11 bg-white/10 text-[#C3C6B1] hover:text-[#B8D088] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button onclick="toggleDrawer()" class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
                     <i class="fa-regular fa-user"></i>
                 </button>
-                <button class="w-11 h-11 bg-white/10 text-[#C3C6B1] hover:text-[#B8D088] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
                     <i class="fa-regular fa-envelope"></i>
                 </button>
             </div>
 
             <!-- Bottom Settings Icons -->
             <div class="flex lg:flex-col items-center gap-3 mt-0 lg:mt-auto shrink-0">
-                <button class="w-11 h-11 bg-white/10 text-[#C3C6B1] hover:text-[#B8D088] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
                     <i class="fa-solid fa-gear"></i>
                 </button>
-                <button onclick="toggleDrawer()" class="w-11 h-11 bg-white/20 text-[#FFFFFF] hover:text-[#B8D088] rounded-full flex items-center justify-center text-base hover:bg-white/30 transition">
+                <button onclick="toggleDrawer()" class="w-11 h-11 bg-white/20 text-[#FFFFFF] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/30 transition">
                     <i class="fa-solid fa-right-to-bracket"></i>
                 </button>
             </div>
@@ -157,7 +157,7 @@
                     <div class="bg-card-white border-card-custom p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm min-h-[180px]">
                         <div class="flex justify-between items-start">
                             <span class="text-xl text-icon-muted"><i class="fa-solid fa-wave-square"></i></span>
-                            <span class="bg-[#B8D088] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                                 ★ 4.8
                             </span>
                         </div>
@@ -184,7 +184,7 @@
                     <div class="bg-card-white border-card-custom p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm min-h-[180px]">
                         <div class="flex justify-between items-start">
                             <span class="text-xl text-icon-muted"><i class="fa-solid fa-tooth"></i></span>
-                            <span class="bg-[#B8D088] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                                 ★ 4.9
                             </span>
                         </div>
@@ -211,7 +211,7 @@
                     <div class="bg-card-white border-card-custom p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm min-h-[180px]">
                         <div class="flex justify-between items-start">
                             <span class="text-xl text-icon-muted"><i class="fa-solid fa-cubes"></i></span>
-                            <span class="bg-[#B8D088] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                                 ★ 4.9
                             </span>
                         </div>
@@ -238,7 +238,7 @@
                     <div class="bg-card-white border-card-custom p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm min-h-[180px]">
                         <div class="flex justify-between items-start">
                             <span class="text-xl text-icon-muted"><i class="fa-solid fa-boxes-stacked"></i></span>
-                            <span class="bg-[#B8D088] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                                 ★ 4.9
                             </span>
                         </div>
@@ -266,10 +266,10 @@
         </main>
 
         <!-- 3. Right Sidebar Area (Expanded & Full Height) -->
-        <aside class="w-full lg:w-[360px] xl:w-[380px] space-y-3 shrink-0 bg-[#C3C6B1] p-2 rounded-[28px] flex flex-col justify-between overflow-y-auto scrollbar-hide">
+        <aside class="w-full lg:w-[360px] xl:w-[380px] space-y-3 shrink-0 bg-[#E8EAE0] p-2 rounded-[28px] flex flex-col justify-between overflow-y-auto scrollbar-hide">
             
             <!-- User Profile Box -->
-            <div class="bg-card-white/40 border border-[#81A684]/40 p-4 rounded-[24px]">
+            <div class="bg-card-white/50 border border-[#81A684]/40 p-4 rounded-[24px]">
                 <div class="flex justify-between items-center mb-1">
                     <button class="text-sub-heading hover:text-dark-heading transition text-base"><i class="fa-regular fa-bell"></i></button>
                     <button class="text-sub-heading hover:text-dark-heading transition text-base"><i class="fa-solid fa-gear"></i></button>
@@ -304,7 +304,7 @@
                         <span class="text-xs text-sub-heading block">Activity</span>
                         <div class="flex items-center gap-1.5 mt-0.5">
                             <span class="text-xl font-bold text-dark-heading">3.5h</span>
-                            <span class="bg-[#B8D088] text-[#3A482E] text-xs font-semibold px-2 py-0.5 rounded-full">👍 Practice Hours</span>
+                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-semibold px-2 py-0.5 rounded-full">👍 Practice Hours</span>
                         </div>
                     </div>
                     <button class="text-xs border border-[#81A684] bg-white px-2.5 py-1 rounded-lg text-sub-heading flex items-center gap-1 shadow-sm">
@@ -313,13 +313,13 @@
                 </div>
 
                 <div class="flex items-end justify-between h-16 pt-2 px-0.5">
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#81A684] rounded-t-lg h-8"></div><span class="text-[9px] text-sub-heading">Jan</span></div>
+                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#9CB584] rounded-t-lg h-8"></div><span class="text-[9px] text-sub-heading">Jan</span></div>
                     <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#3A482E] rounded-t-lg h-12"></div><span class="text-[9px] text-sub-heading">Jan</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#81A684] rounded-t-lg h-6"></div><span class="text-[9px] text-sub-heading">Aug</span></div>
+                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#9CB584] rounded-t-lg h-6"></div><span class="text-[9px] text-sub-heading">Aug</span></div>
                     <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#3A482E] rounded-t-lg h-14"></div><span class="text-[9px] text-sub-heading">Sep</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#81A684] rounded-t-lg h-5"></div><span class="text-[9px] text-sub-heading">Oct</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#81A684]/60 rounded-t-lg h-4"></div><span class="text-[9px] text-sub-heading">Nov</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#3A482E] rounded-t-lg h-12"></div><span class="text-[9px] bg-[#3A482E] text-[#B8D088] px-1 py-0.5 rounded text-[9px]">Dec</span></div>
+                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#9CB584] rounded-t-lg h-5"></div><span class="text-[9px] text-sub-heading">Oct</span></div>
+                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#9CB584]/60 rounded-t-lg h-4"></div><span class="text-[9px] text-sub-heading">Nov</span></div>
+                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#3A482E] rounded-t-lg h-12"></div><span class="text-[9px] bg-[#3A482E] text-[#A8C85D] px-1 py-0.5 rounded text-[9px]">Dec</span></div>
                 </div>
             </div>
 
@@ -334,7 +334,7 @@
                         <div class="flex-1 min-w-0">
                             <h4 class="text-xs font-bold text-dark-heading leading-tight truncate">Wire Bending: Basic to</h4>
                             <p class="text-xs font-normal text-sub-heading truncate">การดัดลวด...</p>
-                            <div class="w-full bg-[#81A684]/30 h-1 rounded-full mt-1 overflow-hidden">
+                            <div class="w-full bg-[#9CB584]/40 h-1 rounded-full mt-1 overflow-hidden">
                                 <div class="bg-[#3A482E] h-full w-2/3 rounded-full"></div>
                             </div>
                         </div>
@@ -345,7 +345,7 @@
                         <div class="flex-1 min-w-0">
                             <h4 class="text-xs font-bold text-dark-heading leading-tight truncate">Digital Dentistry: CAD/CAM</h4>
                             <p class="text-xs font-normal text-sub-heading truncate">สำหรับรี...</p>
-                            <div class="w-full bg-[#81A684]/30 h-1 rounded-full mt-1 overflow-hidden">
+                            <div class="w-full bg-[#9CB584]/40 h-1 rounded-full mt-1 overflow-hidden">
                                 <div class="bg-[#3A482E] h-full w-1/2 rounded-full"></div>
                             </div>
                         </div>
@@ -357,18 +357,18 @@
     </div>
 
     <!-- 4. Footer Section -->
-    <footer class="w-full bg-nav-dark text-[#C3C6B1] p-2 px-4 text-xs flex flex-col md:flex-row justify-between items-center gap-1.5 rounded-2xl shrink-0 shadow-md">
+    <footer class="w-full bg-nav-dark text-[#E8EAE0] p-2 px-4 text-xs flex flex-col md:flex-row justify-between items-center gap-1.5 rounded-2xl shrink-0 shadow-md">
         <div class="flex flex-wrap items-center justify-center gap-3">
-            <a href="#" class="flex items-center gap-1 hover:text-[#B8D088] transition text-xs"><i class="fa-solid fa-phone text-xs"></i> Contact info</a>
-            <a href="#" class="flex items-center gap-1 hover:text-[#B8D088] transition text-xs"><i class="fa-solid fa-envelope text-xs"></i> Resources</a>
-            <a href="#" class="flex items-center gap-1 hover:text-[#B8D088] transition text-xs"><i class="fa-regular fa-user text-xs"></i> Profile</a>
-            <a href="#" class="flex items-center gap-1 hover:text-[#B8D088] transition text-xs">Contact</a>
+            <a href="#" class="flex items-center gap-1 hover:text-[#A8C85D] transition text-xs"><i class="fa-solid fa-phone text-xs"></i> Contact info</a>
+            <a href="#" class="flex items-center gap-1 hover:text-[#A8C85D] transition text-xs"><i class="fa-solid fa-envelope text-xs"></i> Resources</a>
+            <a href="#" class="flex items-center gap-1 hover:text-[#A8C85D] transition text-xs"><i class="fa-regular fa-user text-xs"></i> Profile</a>
+            <a href="#" class="flex items-center gap-1 hover:text-[#A8C85D] transition text-xs">Contact</a>
         </div>
         <div class="flex flex-wrap items-center justify-center gap-3">
             <span class="text-xs">04182244005</span>
             <span class="flex items-center gap-1 text-xs"><i class="fa-solid fa-globe text-xs"></i> Dental Labform</span>
         </div>
-        <div class="text-[#C3C6B1]/70 text-xs">© KP Dental Labform</div>
+        <div class="text-[#E8EAE0]/70 text-xs">© KP Dental Labform</div>
     </footer>
 
     <!-- 5. Slide-in Drawer -->
