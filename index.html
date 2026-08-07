@@ -14,38 +14,8 @@
     <style>
         body {
             font-family: 'Inter', 'Kanit', sans-serif;
-            background-color: #E8EAE0 !important;
-            color: #3A482E;
-        }
-
-        /* Custom Colors - Updated to match image 2 */
-        .bg-nav-dark { background-color: #3A482E !important; }
-        .bg-nav-medium { background-color: #487564 !important; }
-        .bg-main-light { background-color: #E8EAE0 !important; }
-        .bg-card-white { background-color: #FFFFFF !important; }
-        
-        .text-dark-heading { color: #3A482E !important; }
-        .text-sub-heading { color: #4B553A !important; }
-        .text-pastel-light { color: #E8EAE0 !important; }
-        .text-highlight { color: #A8C85D !important; }
-        .text-icon-muted { color: #79958C !important; }
-
-        /* Buttons */
-        .btn-primary {
-            background-color: #A8C85D !important;
-            color: #3A482E !important;
-        }
-        .btn-primary:hover { opacity: 0.9; }
-        
-        .btn-secondary {
-            background-color: #487564 !important;
-            color: #FFFFFF !important;
-        }
-        .btn-secondary:hover { opacity: 0.9; }
-
-        /* Card Borders */
-        .border-card-custom {
-            border: 1px solid #81A684 !important;
+            background-color: #E2E8D8 !important;
+            color: #2D3A22;
         }
 
         .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -68,195 +38,206 @@
         }
     </style>
 </head>
-<body class="h-full bg-main-light flex flex-col justify-between p-2 sm:p-2.5 xl:p-3 gap-2.5 relative overflow-x-hidden">
+<body class="h-full bg-[#E2E8D8] flex flex-col justify-between p-3 lg:p-4 gap-3 relative overflow-x-hidden selection:bg-[#3E5235] selection:text-white">
 
-    <!-- Container หลัก ยืดเต็มความสูง -->
-    <div class="w-full mx-auto flex flex-col lg:flex-row gap-2.5 xl:gap-3 flex-1 h-full min-h-0">
+    <!-- Container หลัก -->
+    <div class="w-full mx-auto flex flex-col lg:flex-row gap-4 flex-1 h-full min-h-0 max-w-[1600px]">
         
         <!-- 1. Left Sidebar Navigation -->
-        <aside class="w-full lg:w-[88px] bg-nav-dark rounded-[28px] p-2.5 lg:py-5 lg:px-2.5 flex flex-row lg:flex-col items-center justify-between gap-3.5 shrink-0 shadow-md">
+        <aside class="w-full lg:w-[84px] bg-[#3E5235] rounded-[32px] p-3 lg:py-6 lg:px-3 flex flex-row lg:flex-col items-center justify-between gap-4 shrink-0 shadow-lg">
             <!-- Top Logo -->
-            <div class="w-11 h-11 rounded-full flex items-center justify-center text-[#A8C85D] text-xl font-bold shrink-0">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center text-[#9BB684] text-2xl font-bold shrink-0">
                 <i class="fa-solid fa-leaf"></i>
             </div>
             
             <!-- Main Navigation Icons -->
             <div class="flex lg:flex-col items-center gap-3 shrink-0">
-                <button class="w-11 h-11 btn-primary rounded-full flex items-center justify-center text-base shadow-sm transition">
+                <button class="w-11 h-11 bg-[#B2C898] text-[#2D3A22] rounded-full flex items-center justify-center text-lg shadow-sm transition hover:scale-105">
                     <i class="fa-solid fa-house"></i>
                 </button>
-                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-lg transition hover:scale-105">
                     <i class="fa-regular fa-calendar-days"></i>
                 </button>
-                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-lg transition hover:scale-105">
                     <i class="fa-solid fa-calendar-minus"></i>
                 </button>
-                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-lg transition hover:scale-105">
                     <i class="fa-regular fa-file-lines"></i>
                 </button>
-                <button onclick="toggleDrawer()" class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button onclick="toggleDrawer()" class="w-11 h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-lg transition hover:scale-105">
                     <i class="fa-regular fa-user"></i>
                 </button>
-                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-lg transition hover:scale-105">
                     <i class="fa-regular fa-envelope"></i>
                 </button>
             </div>
 
-            <!-- Bottom Settings Icons -->
+            <!-- Bottom Settings Icons & Profile -->
             <div class="flex lg:flex-col items-center gap-3 mt-0 lg:mt-auto shrink-0">
-                <button class="w-11 h-11 bg-white/10 text-[#E8EAE0] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/20 transition">
+                <button class="w-11 h-11 bg-white/90 text-[#3E5235] hover:bg-white rounded-full flex items-center justify-center text-lg transition hover:scale-105">
                     <i class="fa-solid fa-gear"></i>
                 </button>
-                <button onclick="toggleDrawer()" class="w-11 h-11 bg-white/20 text-[#FFFFFF] hover:text-[#A8C85D] rounded-full flex items-center justify-center text-base hover:bg-white/30 transition">
-                    <i class="fa-solid fa-right-to-bracket"></i>
+                <button onclick="toggleDrawer()" class="w-11 h-11 rounded-full overflow-hidden border-2 border-white/50 hover:border-white transition hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1594824813566-7885a39644d6?w=150" alt="Profile" class="w-full h-full object-cover">
                 </button>
             </div>
         </aside>
 
         <!-- 2. Main Content Area -->
-        <main class="flex-1 flex flex-col justify-between space-y-2.5 min-h-0 overflow-y-auto scrollbar-hide pr-1">
+        <main class="flex-1 flex flex-col justify-between space-y-4 min-h-0 overflow-y-auto scrollbar-hide pr-1">
             
             <!-- Header Section -->
-            <div class="space-y-3">
-                <h1 class="text-2.5xl sm:text-3xl lg:text-4xl font-bold text-dark-heading leading-[1.15] tracking-tight">
+            <div class="space-y-4">
+                <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#2D3A22] leading-[1.15] tracking-tight">
                     Welcome Dr. Anantaporn to<br>
                     Online Wire Bending &<br>
                     CAD/CAM Training
                 </h1>
 
-                <!-- Category Filters (Larger Scale) -->
-                <div class="flex items-center gap-2 overflow-x-auto scrollbar-hide py-0.5">
-                    <button class="flex items-center gap-1.5 btn-primary px-4 py-2 rounded-full font-bold text-xs whitespace-nowrap shadow-sm">
+                <!-- Category Filters -->
+                <div class="flex items-center gap-2.5 overflow-x-auto scrollbar-hide py-1">
+                    <button class="flex items-center gap-2 bg-[#3E5235] text-white px-5 py-2.5 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:opacity-95 transition">
                         <i class="fa-solid fa-border-all text-xs"></i> All
                     </button>
-                    <button class="flex items-center gap-1.5 btn-secondary px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm">
+                    <button class="flex items-center gap-2 bg-[#C8D6B9] text-[#2D3A22] px-5 py-2.5 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#BDCBAD] transition">
                         <i class="fa-solid fa-wave-square text-xs"></i> Wire Bending
                     </button>
-                    <button class="flex items-center gap-1.5 btn-secondary px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm">
+                    <button class="flex items-center gap-2 bg-[#C8D6B9] text-[#2D3A22] px-5 py-2.5 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#BDCBAD] transition">
                         <i class="fa-solid fa-tooth text-xs"></i> CAD/CAM
                     </button>
-                    <button class="flex items-center gap-1.5 btn-secondary px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm">
+                    <button class="flex items-center gap-2 bg-[#C8D6B9] text-[#2D3A22] px-5 py-2.5 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#BDCBAD] transition">
                         <i class="fa-solid fa-shield-halved text-xs"></i> Retention
                     </button>
-                    <button class="flex items-center gap-1.5 btn-secondary px-4 py-2 rounded-full font-medium text-xs whitespace-nowrap shadow-sm">
+                    <button class="flex items-center gap-2 bg-[#C8D6B9] text-[#2D3A22] px-5 py-2.5 rounded-full font-medium text-xs whitespace-nowrap shadow-sm hover:bg-[#BDCBAD] transition">
                         <i class="fa-solid fa-cube text-xs"></i> Introductory
                     </button>
                 </div>
             </div>
 
-            <!-- Featured Courses Grid (Scaled Up) -->
-            <div class="flex-1 flex flex-col justify-center py-1.5 min-h-0">
-                <h2 class="text-base font-bold text-dark-heading mb-2">
-                    Featured Courses / <span class="font-normal text-sub-heading text-sm">หลักสูตรแนะนำ</span>
+            <!-- Featured Courses Grid -->
+            <div class="flex-1 flex flex-col justify-center min-h-0">
+                <h2 class="text-base font-bold text-[#2D3A22] mb-3">
+                    Featured Courses / <span class="font-normal text-[#586B4D] text-sm">หลักสูตรแนะนำ</span>
                 </h2>
 
-                <!-- Grid 2x2 Full Aspect -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 flex-1 min-h-0">
+                <!-- Grid 2x2 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1 min-h-0">
                     
                     <!-- Card 1 -->
-                    <div class="bg-card-white border-card-custom p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm min-h-[180px]">
+                    <div class="bg-[#C8D6B9] p-5 rounded-[28px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[190px]">
                         <div class="flex justify-between items-start">
-                            <span class="text-xl text-icon-muted"><i class="fa-solid fa-wave-square"></i></span>
-                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                            <span class="text-2xl text-[#3E5235]"><i class="fa-solid fa-wave-square"></i></span>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4 flex flex-col items-end gap-1">
+                            <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm border border-white/40">
                                 ★ 4.8
                             </span>
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400" alt="Course" class="w-32 h-20 object-cover rounded-2xl border border-white/50 shadow-sm mt-1">
                         </div>
                         
-                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-[#81A684]/40">
-                        
-                        <div class="pr-32">
-                            <h3 class="font-bold text-sm text-dark-heading leading-tight mb-0.5">
-                                Wire Bending: Basic to Advanced
+                        <div class="pr-36 mt-2">
+                            <h3 class="font-bold text-base text-[#2D3A22] leading-snug mb-1">
+                                Wire Bending:<br>Basic to Advanced
                             </h3>
-                            <p class="text-xs text-sub-heading">การดัดลวดพื้นฐานและขั้นสูง</p>
+                            <p class="text-xs text-[#4E6142] font-medium">การดัดลวดพื้นฐานและขั้นสูง</p>
                         </div>
 
-                        <div class="flex items-center justify-between pt-2 border-t border-[#81A684]/20">
-                            <span class="text-xs text-sub-heading font-medium">24 Lessons</span>
+                        <div class="flex items-center justify-between pt-3 mt-2">
+                            <span class="text-xs text-[#4E6142] font-semibold">24 Lessons</span>
                             <div class="flex -space-x-2">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border-1.5 border-white object-cover">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border-1.5 border-white object-cover">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
+                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="bg-card-white border-card-custom p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm min-h-[180px]">
+                    <div class="bg-[#C8D6B9] p-5 rounded-[28px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[190px]">
                         <div class="flex justify-between items-start">
-                            <span class="text-xl text-icon-muted"><i class="fa-solid fa-tooth"></i></span>
-                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                            <span class="text-2xl text-[#3E5235]"><i class="fa-solid fa-tooth"></i></span>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4 flex flex-col items-end gap-1">
+                            <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm border border-white/40">
                                 ★ 4.9
                             </span>
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400" alt="Course" class="w-32 h-20 object-cover rounded-2xl border border-white/50 shadow-sm mt-1">
                         </div>
                         
-                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-[#81A684]/40">
-                        
-                        <div class="pr-32">
-                            <h3 class="font-bold text-sm text-dark-heading leading-tight mb-0.5">
-                                Digital Dentistry: CAD/CAM for Retainers
+                        <div class="pr-36 mt-2">
+                            <h3 class="font-bold text-base text-[#2D3A22] leading-snug mb-1">
+                                Digital Dentistry:<br>CAD/CAM for Retainers
                             </h3>
-                            <p class="text-xs text-sub-heading">เทคโนโลยี CAD/CAM สำหรับรีเทนเนอร์</p>
+                            <p class="text-xs text-[#4E6142] font-medium">เทคโนโลยี CAD/CAM สำหรับรีเทนเนอร์</p>
                         </div>
 
-                        <div class="flex items-center justify-between pt-2 border-t border-[#81A684]/20">
-                            <span class="text-xs text-sub-heading font-medium">16 Lessons</span>
+                        <div class="flex items-center justify-between pt-3 mt-2">
+                            <span class="text-xs text-[#4E6142] font-semibold">16 Lessons</span>
                             <div class="flex -space-x-2">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 rounded-full border-1.5 border-white object-cover">
-                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-5 h-5 rounded-full border-1.5 border-white object-cover">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-card-white border-card-custom p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm min-h-[180px]">
+                    <div class="bg-[#C8D6B9] p-5 rounded-[28px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[190px]">
                         <div class="flex justify-between items-start">
-                            <span class="text-xl text-icon-muted"><i class="fa-solid fa-cubes"></i></span>
-                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                            <span class="text-2xl text-[#3E5235]"><i class="fa-solid fa-cubes"></i></span>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4 flex flex-col items-end gap-1">
+                            <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm border border-white/40">
                                 ★ 4.9
                             </span>
+                            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400" alt="Course" class="w-32 h-20 object-cover rounded-2xl border border-white/50 shadow-sm mt-1">
                         </div>
                         
-                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=400" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-[#81A684]/40">
-                        
-                        <div class="pr-32">
-                            <h3 class="font-bold text-sm text-dark-heading leading-tight mb-0.5">
-                                Practical Skills: All Types of Retainers
+                        <div class="pr-36 mt-2">
+                            <h3 class="font-bold text-base text-[#2D3A22] leading-snug mb-1">
+                                Practical Skills:<br>All Types of Retainers
                             </h3>
-                            <p class="text-xs text-sub-heading">การทำรีเทนเนอร์ทุกประเภท</p>
+                            <p class="text-xs text-[#4E6142] font-medium">การทำรีเทนเนอร์ทุกประเภท</p>
                         </div>
 
-                        <div class="flex items-center justify-between pt-2 border-t border-[#81A684]/20">
-                            <span class="text-xs text-sub-heading font-medium">30 Lessons</span>
+                        <div class="flex items-center justify-between pt-3 mt-2">
+                            <span class="text-xs text-[#4E6142] font-semibold">30 Lessons</span>
                             <div class="flex -space-x-2">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-5 h-5 rounded-full border-1.5 border-white object-cover">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-5 h-5 rounded-full border-1.5 border-white object-cover">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="bg-card-white border-card-custom p-4 rounded-[24px] flex flex-col justify-between relative shadow-sm min-h-[180px]">
+                    <div class="bg-[#C8D6B9] p-5 rounded-[28px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[190px]">
                         <div class="flex justify-between items-start">
-                            <span class="text-xl text-icon-muted"><i class="fa-solid fa-boxes-stacked"></i></span>
-                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                            <span class="text-2xl text-[#3E5235]"><i class="fa-solid fa-cube"></i></span>
+                        </div>
+                        
+                        <div class="absolute top-4 right-4 flex flex-col items-end gap-1">
+                            <span class="bg-white/80 backdrop-blur-sm text-[#2D3A22] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm border border-white/40">
                                 ★ 4.9
                             </span>
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400" alt="Course" class="w-32 h-20 object-cover rounded-2xl border border-white/50 shadow-sm mt-1">
                         </div>
                         
-                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-[#81A684]/40">
-                        
-                        <div class="pr-32">
-                            <h3 class="font-bold text-sm text-dark-heading leading-tight mb-0.5">
+                        <div class="pr-36 mt-2">
+                            <h3 class="font-bold text-base text-[#2D3A22] leading-snug mb-1">
                                 Advanced Techniques
                             </h3>
-                            <p class="text-xs text-sub-heading">เทคนิคขั้นสูง</p>
+                            <p class="text-xs text-[#4E6142] font-medium">เทคนิคขั้นสูง</p>
                         </div>
 
-                        <div class="flex items-center justify-between pt-2 border-t border-[#81A684]/20">
-                            <span class="text-xs text-sub-heading font-medium">16 Lessons</span>
+                        <div class="flex items-center justify-between pt-3 mt-2">
+                            <span class="text-xs text-[#4E6142] font-semibold">16 Lessons</span>
                             <div class="flex -space-x-2">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border-1.5 border-white object-cover">
-                                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100" class="w-5 h-5 rounded-full border-1.5 border-white object-cover">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-6 h-6 rounded-full border-2 border-[#C8D6B9] object-cover">
                             </div>
                         </div>
                     </div>
@@ -265,89 +246,123 @@
             </div>
         </main>
 
-        <!-- 3. Right Sidebar Area (Expanded & Full Height) -->
-        <aside class="w-full lg:w-[360px] xl:w-[380px] space-y-3 shrink-0 bg-[#E8EAE0] p-2 rounded-[28px] flex flex-col justify-between overflow-y-auto scrollbar-hide">
+        <!-- 3. Right Sidebar Area -->
+        <aside class="w-full lg:w-[360px] xl:w-[380px] bg-[#C8D6B9] p-4 rounded-[32px] flex flex-col justify-between space-y-4 shrink-0 overflow-y-auto scrollbar-hide shadow-sm">
             
             <!-- User Profile Box -->
-            <div class="bg-card-white/50 border border-[#81A684]/40 p-4 rounded-[24px]">
-                <div class="flex justify-between items-center mb-1">
-                    <button class="text-sub-heading hover:text-dark-heading transition text-base"><i class="fa-regular fa-bell"></i></button>
-                    <button class="text-sub-heading hover:text-dark-heading transition text-base"><i class="fa-solid fa-gear"></i></button>
+            <div class="flex flex-col items-center pt-2">
+                <div class="w-full flex justify-between items-center mb-1">
+                    <button class="text-[#3E5235] hover:text-black transition text-lg p-1"><i class="fa-regular fa-bell"></i></button>
+                    <button class="text-[#3E5235] hover:text-black transition text-lg p-1"><i class="fa-solid fa-gear"></i></button>
                 </div>
                 
-                <div class="flex flex-col items-center py-2">
-                    <img src="https://images.unsplash.com/photo-1594824813566-7885a39644d6?w=200" alt="Doctor" class="w-18 h-18 rounded-full object-cover mb-1.5 border-2 border-[#81A684] shadow-md">
-                    <h3 class="text-sm font-bold text-dark-heading">Dr. Anantaporn</h3>
-                    <p class="text-xs text-sub-heading mb-2">Your Profile</p>
-                </div>
+                <img src="https://images.unsplash.com/photo-1594824813566-7885a39644d6?w=200" alt="Doctor" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-white shadow-md">
+                <h3 class="text-base font-bold text-[#2D3A22]">Dr. Anantaporn</h3>
+                <p class="text-xs text-[#586B4D] mb-4 font-medium">Your Profile</p>
 
-                <div class="bg-card-white border border-[#81A684]/30 p-2.5 rounded-xl flex items-center justify-between shadow-sm">
+                <div class="w-full bg-white/90 backdrop-blur-sm p-3 rounded-2xl flex items-center justify-between shadow-sm">
                     <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-user-group text-sub-heading text-xs"></i>
-                        <span class="text-xs font-bold text-dark-heading">274 Colleagues</span>
+                        <i class="fa-solid fa-user-group text-[#3E5235] text-sm"></i>
+                        <span class="text-xs font-bold text-[#2D3A22]">274 Colleagues</span>
                     </div>
                     <div class="flex items-center gap-1.5">
                         <div class="flex -space-x-2">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-4 h-4 rounded-full object-cover border border-white">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-4 h-4 rounded-full object-cover border border-white">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-4 h-4 rounded-full object-cover border border-white">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full object-cover border border-white">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full object-cover border border-white">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 rounded-full object-cover border border-white">
                         </div>
-                        <i class="fa-solid fa-chevron-right text-xs text-sub-heading"></i>
+                        <i class="fa-solid fa-chevron-right text-xs text-[#586B4D] ml-1"></i>
                     </div>
                 </div>
             </div>
 
             <!-- Activity Chart Section -->
-            <div class="bg-card-white border border-[#81A684]/40 p-4 rounded-[24px] shadow-sm">
+            <div class="bg-white/90 backdrop-blur-sm p-4 rounded-[24px] shadow-sm">
                 <div class="flex justify-between items-center mb-3">
                     <div>
-                        <span class="text-xs text-sub-heading block">Activity</span>
+                        <span class="text-xs text-[#586B4D] block font-medium">Activity</span>
                         <div class="flex items-center gap-1.5 mt-0.5">
-                            <span class="text-xl font-bold text-dark-heading">3.5h</span>
-                            <span class="bg-[#A8C85D] text-[#3A482E] text-xs font-semibold px-2 py-0.5 rounded-full">👍 Practice Hours</span>
+                            <span class="text-xl font-extrabold text-[#2D3A22]">3.5h</span>
+                            <span class="bg-[#D8E4C9] text-[#2D3A22] text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                👏 Practice Hours
+                            </span>
                         </div>
                     </div>
-                    <button class="text-xs border border-[#81A684] bg-white px-2.5 py-1 rounded-lg text-sub-heading flex items-center gap-1 shadow-sm">
+                    <button class="text-xs border border-gray-300 bg-white px-2.5 py-1 rounded-xl text-[#2D3A22] flex items-center gap-1 shadow-sm font-medium">
                         Year <i class="fa-solid fa-chevron-down text-[9px]"></i>
                     </button>
                 </div>
 
-                <div class="flex items-end justify-between h-16 pt-2 px-0.5">
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#9CB584] rounded-t-lg h-8"></div><span class="text-[9px] text-sub-heading">Jan</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#3A482E] rounded-t-lg h-12"></div><span class="text-[9px] text-sub-heading">Jan</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#9CB584] rounded-t-lg h-6"></div><span class="text-[9px] text-sub-heading">Aug</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#3A482E] rounded-t-lg h-14"></div><span class="text-[9px] text-sub-heading">Sep</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#9CB584] rounded-t-lg h-5"></div><span class="text-[9px] text-sub-heading">Oct</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#9CB584]/60 rounded-t-lg h-4"></div><span class="text-[9px] text-sub-heading">Nov</span></div>
-                    <div class="flex flex-col items-center gap-1"><div class="w-3 bg-[#3A482E] rounded-t-lg h-12"></div><span class="text-[9px] bg-[#3A482E] text-[#A8C85D] px-1 py-0.5 rounded text-[9px]">Dec</span></div>
+                <!-- Custom Bar Chart -->
+                <div class="flex items-end justify-between h-24 pt-4 px-1 gap-1">
+                    <div class="flex flex-col items-center gap-1 flex-1">
+                        <div class="w-full bg-[#B2C898] rounded-full h-12"></div>
+                        <span class="text-[10px] text-[#586B4D] font-medium">Jan</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1 flex-1">
+                        <div class="w-full bg-[#3E5235] rounded-full h-16"></div>
+                        <span class="text-[10px] text-[#586B4D] font-medium">Jan</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1 flex-1">
+                        <div class="w-full bg-[#B2C898] rounded-full h-10"></div>
+                        <span class="text-[10px] text-[#586B4D] font-medium">Aug</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1 flex-1">
+                        <div class="w-full bg-[#3E5235] rounded-full h-20"></div>
+                        <span class="text-[10px] text-[#586B4D] font-medium">Sep</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1 flex-1">
+                        <div class="w-full bg-[#B2C898] rounded-full h-8"></div>
+                        <span class="text-[10px] text-[#586B4D] font-medium">Oct</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1 flex-1">
+                        <div class="w-full bg-[#B2C898]/60 rounded-full h-6"></div>
+                        <span class="text-[10px] text-[#586B4D] font-medium">Nov</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-1 flex-1">
+                        <div class="w-full bg-[#3E5235] rounded-full h-16 relative flex items-center justify-center">
+                            <div class="absolute -top-1 w-full bg-[#B2C898] h-6 rounded-t-full"></div>
+                        </div>
+                        <span class="text-[10px] bg-[#3E5235] text-white px-1.5 py-0.5 rounded-full font-medium">Dec</span>
+                    </div>
                 </div>
             </div>
 
             <!-- Your Courses List -->
             <div>
-                <h3 class="text-xs font-bold text-dark-heading mb-2">
-                    Your Courses / <span class="font-normal text-sub-heading text-xs">หลักสูตรของคุณ</span>
+                <h3 class="text-xs font-bold text-[#2D3A22] mb-2.5">
+                    Your Courses / <span class="font-normal text-[#586B4D]">หลักสูตรของคุณ</span>
                 </h3>
-                <div class="space-y-2">
-                    <div class="bg-card-white border border-[#81A684]/40 p-2.5 rounded-xl flex items-center gap-2 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-10 h-10 rounded-lg object-cover shrink-0 border border-[#81A684]/30">
+                <div class="space-y-2.5">
+                    <!-- Course Item 1 -->
+                    <div class="bg-white/80 p-2.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white/50">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-12 h-12 rounded-xl object-cover shrink-0">
                         <div class="flex-1 min-w-0">
-                            <h4 class="text-xs font-bold text-dark-heading leading-tight truncate">Wire Bending: Basic to</h4>
-                            <p class="text-xs font-normal text-sub-heading truncate">การดัดลวด...</p>
-                            <div class="w-full bg-[#9CB584]/40 h-1 rounded-full mt-1 overflow-hidden">
-                                <div class="bg-[#3A482E] h-full w-2/3 rounded-full"></div>
+                            <h4 class="text-xs font-bold text-[#2D3A22] leading-tight truncate">Wire Bending: Basic to</h4>
+                            <p class="text-[11px] font-normal text-[#586B4D] truncate">การดัดลวดพื้นฐานและขั้นสูง</p>
+                            <div class="w-full bg-gray-200 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                <div class="bg-[#3E5235] h-full w-3/4 rounded-full"></div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="bg-card-white border border-[#81A684]/40 p-2.5 rounded-xl flex items-center gap-2 shadow-sm">
-                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-10 h-10 rounded-lg object-cover shrink-0 border border-[#81A684]/30">
+                    <!-- Course Item 2 -->
+                    <div class="bg-white/80 p-2.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white/50">
+                        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-12 h-12 rounded-xl object-cover shrink-0">
                         <div class="flex-1 min-w-0">
-                            <h4 class="text-xs font-bold text-dark-heading leading-tight truncate">Digital Dentistry: CAD/CAM</h4>
-                            <p class="text-xs font-normal text-sub-heading truncate">สำหรับรี...</p>
-                            <div class="w-full bg-[#9CB584]/40 h-1 rounded-full mt-1 overflow-hidden">
-                                <div class="bg-[#3A482E] h-full w-1/2 rounded-full"></div>
+                            <h4 class="text-xs font-bold text-[#2D3A22] leading-tight truncate">Digital Dentistry: CAD/CAM</h4>
+                            <p class="text-[11px] font-normal text-[#586B4D] truncate">for Retainers</p>
+                            <div class="w-full bg-gray-200 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                <div class="bg-[#3E5235] h-full w-1/2 rounded-full"></div>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Course Item 3 (Bottom Cutoff Peek) -->
+                    <div class="bg-white/80 p-2.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white/50 opacity-80">
+                        <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=150" class="w-12 h-12 rounded-xl object-cover shrink-0">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="text-xs font-bold text-[#2D3A22] leading-tight truncate">CAD/CAM</h4>
                         </div>
                     </div>
                 </div>
@@ -357,18 +372,18 @@
     </div>
 
     <!-- 4. Footer Section -->
-    <footer class="w-full bg-nav-dark text-[#E8EAE0] p-2 px-4 text-xs flex flex-col md:flex-row justify-between items-center gap-1.5 rounded-2xl shrink-0 shadow-md">
-        <div class="flex flex-wrap items-center justify-center gap-3">
-            <a href="#" class="flex items-center gap-1 hover:text-[#A8C85D] transition text-xs"><i class="fa-solid fa-phone text-xs"></i> Contact info</a>
-            <a href="#" class="flex items-center gap-1 hover:text-[#A8C85D] transition text-xs"><i class="fa-solid fa-envelope text-xs"></i> Resources</a>
-            <a href="#" class="flex items-center gap-1 hover:text-[#A8C85D] transition text-xs"><i class="fa-regular fa-user text-xs"></i> Profile</a>
-            <a href="#" class="flex items-center gap-1 hover:text-[#A8C85D] transition text-xs">Contact</a>
+    <footer class="w-full bg-[#3E5235] text-white p-2.5 px-6 text-xs flex flex-col md:flex-row justify-between items-center gap-2 rounded-2xl shrink-0 shadow-md">
+        <div class="flex flex-wrap items-center justify-center gap-4">
+            <a href="#" class="flex items-center gap-1.5 hover:text-[#B2C898] transition"><i class="fa-solid fa-phone text-xs"></i> Contact info</a>
+            <a href="#" class="flex items-center gap-1.5 hover:text-[#B2C898] transition"><i class="fa-solid fa-envelope text-xs"></i> Resources</a>
+            <a href="#" class="flex items-center gap-1.5 hover:text-[#B2C898] transition"><i class="fa-regular fa-user text-xs"></i> Profile</a>
+            <a href="#" class="flex items-center gap-1.5 hover:text-[#B2C898] transition">Contact</a>
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-3">
-            <span class="text-xs">04182244005</span>
-            <span class="flex items-center gap-1 text-xs"><i class="fa-solid fa-globe text-xs"></i> Dental Labform</span>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+            <span>04182244005</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-xs"></i> Dental Labform</span>
         </div>
-        <div class="text-[#E8EAE0]/70 text-xs">© KP Dental Labform</div>
+        <div class="text-white/70">© KP Dental Labform</div>
     </footer>
 
     <!-- 5. Slide-in Drawer -->
@@ -376,8 +391,8 @@
     <div id="loginDrawer" class="fixed top-0 right-0 h-full w-full max-w-sm sm:max-w-md bg-white z-50 shadow-2xl p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
         <div>
             <div class="flex justify-between items-center mb-6">
-                <div class="flex items-center gap-2 text-dark-heading font-bold text-lg sm:text-xl">
-                    <i class="fa-solid fa-tooth text-2xl text-[#487564]"></i> KP Dental
+                <div class="flex items-center gap-2 text-[#2D3A22] font-bold text-lg sm:text-xl">
+                    <i class="fa-solid fa-tooth text-2xl text-[#3E5235]"></i> KP Dental
                 </div>
                 <button onclick="toggleDrawer()" class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 flex items-center justify-center transition">
                     <i class="fa-solid fa-xmark text-sm"></i>
@@ -385,36 +400,36 @@
             </div>
 
             <div class="mb-6">
-                <h2 class="text-2xl font-bold text-dark-heading mb-1">Welcome Back!</h2>
-                <p class="text-xs text-sub-heading">กรุณากรอกข้อมูลเพื่อเข้าสู่ระบบเรียนออนไลน์</p>
+                <h2 class="text-2xl font-bold text-[#2D3A22] mb-1">Welcome Back!</h2>
+                <p class="text-xs text-gray-500">กรุณากรอกข้อมูลเพื่อเข้าสู่ระบบเรียนออนไลน์</p>
             </div>
 
             <form onsubmit="event.preventDefault(); alert('เข้าสู่ระบบสำเร็จ!'); toggleDrawer();" class="space-y-4">
                 <div>
-                    <label class="block text-xs font-semibold text-dark-heading mb-1.5">Email / Username</label>
+                    <label class="block text-xs font-semibold text-[#2D3A22] mb-1.5">Email / Username</label>
                     <div class="relative">
                         <i class="fa-regular fa-envelope absolute left-3 top-3.5 text-gray-400 text-sm"></i>
-                        <input type="email" required placeholder="example@dentallab.com" class="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#487564]">
+                        <input type="email" required placeholder="example@dentallab.com" class="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#3E5235]">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-dark-heading mb-1.5">Password</label>
+                    <label class="block text-xs font-semibold text-[#2D3A22] mb-1.5">Password</label>
                     <div class="relative">
                         <i class="fa-solid fa-lock absolute left-3 top-3.5 text-gray-400 text-sm"></i>
-                        <input type="password" required placeholder="••••••••" class="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#487564]">
+                        <input type="password" required placeholder="••••••••" class="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-xs focus:outline-none focus:border-[#3E5235]">
                     </div>
                 </div>
 
                 <div class="flex justify-between items-center text-xs pt-1">
-                    <label class="flex items-center gap-1.5 text-sub-heading cursor-pointer">
-                        <input type="checkbox" class="rounded border-gray-300 text-[#487564] focus:ring-[#487564]">
+                    <label class="flex items-center gap-1.5 text-gray-600 cursor-pointer">
+                        <input type="checkbox" class="rounded border-gray-300 text-[#3E5235] focus:ring-[#3E5235]">
                         <span>Remember me</span>
                     </label>
-                    <a href="#" class="text-dark-heading font-semibold hover:underline">Forgot password?</a>
+                    <a href="#" class="text-[#3E5235] font-semibold hover:underline">Forgot password?</a>
                 </div>
 
-                <button type="submit" class="w-full btn-secondary font-medium text-xs sm:text-sm py-3 rounded-xl shadow-md mt-3">
+                <button type="submit" class="w-full bg-[#3E5235] text-white font-medium text-xs sm:text-sm py-3 rounded-xl shadow-md mt-3 hover:bg-[#34452C] transition">
                     Log In
                 </button>
             </form>
@@ -425,13 +440,13 @@
                 <div class="h-[1px] bg-gray-200 flex-1"></div>
             </div>
 
-            <button onclick="alert('สมัครสมาชิก');" class="w-full btn-primary font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2 shadow-sm">
+            <button onclick="alert('สมัครสมาชิก');" class="w-full bg-[#B2C898] text-[#2D3A22] font-bold text-xs py-2.5 rounded-xl transition flex items-center justify-center gap-2 shadow-sm hover:bg-[#A3BB87]">
                 <i class="fa-solid fa-user-plus text-xs"></i> Create New Account (Sign In)
             </button>
         </div>
 
         <div class="pt-6 border-t border-gray-100 text-center">
-            <p class="text-[11px] text-sub-heading">© KP Dental Labform. All rights reserved.</p>
+            <p class="text-[11px] text-gray-400">© KP Dental Labform. All rights reserved.</p>
         </div>
     </div>
 
