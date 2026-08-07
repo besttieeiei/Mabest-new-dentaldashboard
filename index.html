@@ -18,6 +18,22 @@
             color: #1C261E;
         }
 
+        /* Custom Scrollbar สำหรับส่วนกลาง */
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: rgba(52, 82, 60, 0.05);
+            border-radius: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #B3C4A1;
+            border-radius: 10px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: #34523C;
+        }
+
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -42,7 +58,7 @@
     <!-- Container หลัก เต็มความสูงหน้าจอ -->
     <div class="w-full h-full flex flex-col lg:flex-row gap-3 flex-1 min-h-0">
         
-        <!-- 1. Left Sidebar Navigation (โทนสีเขียวเข้ม #34523C) -->
+        <!-- 1. Left Sidebar Navigation -->
         <aside class="w-full lg:w-[84px] xl:w-[90px] bg-[#34523C] rounded-[24px] lg:rounded-[32px] p-2.5 lg:py-6 lg:px-3 flex flex-row lg:flex-col items-center justify-between gap-3 shrink-0 shadow-lg order-first">
             <!-- Top Logo -->
             <div class="w-11 h-11 lg:w-13 lg:h-13 rounded-full flex items-center justify-center text-[#A3B88C] text-2xl font-bold shrink-0">
@@ -88,19 +104,18 @@
             <!-- Main Content + Right Sidebar Grid -->
             <div class="flex-1 flex flex-col lg:flex-row gap-3.5 min-h-0 overflow-y-auto lg:overflow-hidden">
                 
-                <!-- 2. Main Content Area (ตรงกลาง) -->
-                <main class="flex-1 flex flex-col justify-between space-y-3.5 min-h-0 lg:overflow-y-auto scrollbar-hide pr-0 lg:pr-1">
+                <!-- 2. Main Content Area (ส่วนกลางที่ปรับปรุงใหม่) -->
+                <main class="flex-1 flex flex-col justify-between space-y-3.5 min-h-0 lg:overflow-y-auto custom-scroll pr-0 lg:pr-2">
                     
                     <!-- Header Section -->
                     <div class="space-y-3">
-                        <!-- ปรับขนาดตัวอักษรหัวข้อให้ใหญ่และหนาเด่น -->
                         <h1 class="text-3xl sm:text-4xl xl:text-5xl font-black text-[#111812] leading-[1.15] tracking-tight">
                             Welcome Dr. Anantaporn to<br>
                             Online Wire Bending &<br>
                             CAD/CAM Training
                         </h1>
 
-                        <!-- Category Filters (ตัวอักษรใหญ่ขึ้น) -->
+                        <!-- Category Filters -->
                         <div class="flex items-center gap-2.5 overflow-x-auto scrollbar-hide py-1">
                             <button class="flex items-center gap-2 bg-[#34523C] text-[#EAEFE2] px-5 py-2.5 rounded-full font-semibold text-sm sm:text-base whitespace-nowrap shadow-sm hover:opacity-95 transition">
                                 <i class="fa-solid fa-border-all text-xs"></i> All
@@ -120,131 +135,191 @@
                         </div>
                     </div>
 
-                    <!-- Featured Courses Grid -->
-                    <div class="flex-1 flex flex-col justify-center min-h-0 pt-1">
-                        <h2 class="text-base sm:text-lg font-extrabold text-[#111812] mb-2.5">
-                            Featured Courses / <span class="font-medium text-[#3E4E3F] text-sm sm:text-base">หลักสูตรแนะนำ</span>
-                        </h2>
+                    <!-- Featured Courses Grid (ปรับเป็น 3 ช่องต่อแถว + Scrollable) -->
+                    <div class="flex-1 flex flex-col pt-1 pb-2">
+                        <div class="flex justify-between items-center mb-2.5">
+                            <h2 class="text-base sm:text-lg font-extrabold text-[#111812]">
+                                Featured Courses / <span class="font-medium text-[#3E4E3F] text-sm sm:text-base">หลักสูตรแนะนำ</span>
+                            </h2>
+                            <span class="text-xs font-semibold text-[#3E4E3F] flex items-center gap-1">
+                                <i class="fa-solid fa-[#34523C] fa-arrow-down-short-wide"></i> Scroll to see more
+                            </span>
+                        </div>
 
-                        <!-- Grid -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 flex-1 min-h-0">
+                        <!-- Grid 3 ช่องต่อแถว (1 ช่องบนมือถือ / 2 ช่องบนแท็บเล็ต / 3 ช่องบนจอใหญ่) -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
                             
                             <!-- Card 1 -->
-                            <div class="bg-[#B3C4A1] p-4 sm:p-5 rounded-[28px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[190px]">
+                            <div class="bg-[#B3C4A1] p-4 rounded-[26px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[185px]">
                                 <div class="flex justify-between items-start">
-                                    <span class="text-2xl text-[#34523C]"><i class="fa-solid fa-wave-square"></i></span>
-                                    <span class="bg-white/90 text-[#111812] text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
-                                        <i class="fa-solid fa-star text-amber-500 text-[10px]"></i> 4.8
+                                    <span class="text-xl text-[#34523C]"><i class="fa-solid fa-wave-square"></i></span>
+                                    <span class="bg-white/90 text-[#111812] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                                        <i class="fa-solid fa-star text-amber-500 text-[9px]"></i> 4.8
                                     </span>
                                 </div>
                                 
                                 <div class="absolute top-3.5 right-3.5">
-                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300" alt="Course" class="w-28 sm:w-32 h-18 sm:h-20 object-cover rounded-2xl border-2 border-white/60 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300" alt="Course" class="w-24 sm:w-26 h-16 sm:h-18 object-cover rounded-xl border-2 border-white/60 shadow-sm">
                                 </div>
                                 
-                                <div class="pr-32 sm:pr-36 mt-1">
-                                    <!-- ชื่อคอร์สขนาดใหญ่ ชัดเจน -->
-                                    <h3 class="font-extrabold text-sm sm:text-base text-[#111812] leading-tight mb-1">
+                                <div class="pr-26 sm:pr-28 mt-1">
+                                    <h3 class="font-extrabold text-sm text-[#111812] leading-tight mb-1">
                                         Wire Bending:<br>Basic to Advanced
                                     </h3>
-                                    <p class="text-xs sm:text-sm text-[#2A3B2C] font-semibold leading-tight">การดัดลวดพื้นฐานและขั้นสูง</p>
+                                    <p class="text-xs text-[#2A3B2C] font-semibold leading-tight">การดัดลวดพื้นฐานและขั้นสูง</p>
                                 </div>
 
-                                <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-xs sm:text-sm text-[#2A3B2C] font-bold">24 Lessons</span>
-                                    <div class="flex -space-x-2">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
+                                <div class="flex items-center justify-between pt-3 mt-auto">
+                                    <span class="text-xs text-[#2A3B2C] font-bold">24 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 2 -->
-                            <div class="bg-[#B3C4A1] p-4 sm:p-5 rounded-[28px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[190px]">
+                            <div class="bg-[#B3C4A1] p-4 rounded-[26px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[185px]">
                                 <div class="flex justify-between items-start">
-                                    <span class="text-2xl text-[#34523C]"><i class="fa-solid fa-tooth"></i></span>
-                                    <span class="bg-white/90 text-[#111812] text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
-                                        <i class="fa-solid fa-star text-amber-500 text-[10px]"></i> 4.9
+                                    <span class="text-xl text-[#34523C]"><i class="fa-solid fa-tooth"></i></span>
+                                    <span class="bg-white/90 text-[#111812] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                                        <i class="fa-solid fa-star text-amber-500 text-[9px]"></i> 4.9
                                     </span>
                                 </div>
                                 
                                 <div class="absolute top-3.5 right-3.5">
-                                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=300" alt="Course" class="w-28 sm:w-32 h-18 sm:h-20 object-cover rounded-2xl border-2 border-white/60 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=300" alt="Course" class="w-24 sm:w-26 h-16 sm:h-18 object-cover rounded-xl border-2 border-white/60 shadow-sm">
                                 </div>
                                 
-                                <div class="pr-32 sm:pr-36 mt-1">
-                                    <h3 class="font-extrabold text-sm sm:text-base text-[#111812] leading-tight mb-1">
-                                        Digital Dentistry:<br>CAD/CAM for Retainers
+                                <div class="pr-26 sm:pr-28 mt-1">
+                                    <h3 class="font-extrabold text-sm text-[#111812] leading-tight mb-1">
+                                        Digital Dentistry:<br>CAD/CAM Retainers
                                     </h3>
-                                    <p class="text-xs sm:text-sm text-[#2A3B2C] font-semibold leading-tight">เทคโนโลยี CAD/CAM สำหรับรีเทนเนอร์</p>
+                                    <p class="text-xs text-[#2A3B2C] font-semibold leading-tight">CAD/CAM สำหรับรีเทนเนอร์</p>
                                 </div>
 
-                                <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-xs sm:text-sm text-[#2A3B2C] font-bold">16 Lessons</span>
-                                    <div class="flex -space-x-2">
-                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
+                                <div class="flex items-center justify-between pt-3 mt-auto">
+                                    <span class="text-xs text-[#2A3B2C] font-bold">16 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 3 -->
-                            <div class="bg-[#B3C4A1] p-4 sm:p-5 rounded-[28px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[190px]">
+                            <div class="bg-[#B3C4A1] p-4 rounded-[26px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[185px]">
                                 <div class="flex justify-between items-start">
-                                    <span class="text-2xl text-[#34523C]"><i class="fa-solid fa-cubes"></i></span>
-                                    <span class="bg-white/90 text-[#111812] text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
-                                        <i class="fa-solid fa-star text-amber-500 text-[10px]"></i> 4.9
+                                    <span class="text-xl text-[#34523C]"><i class="fa-solid fa-cubes"></i></span>
+                                    <span class="bg-white/90 text-[#111812] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                                        <i class="fa-solid fa-star text-amber-500 text-[9px]"></i> 4.9
                                     </span>
                                 </div>
                                 
                                 <div class="absolute top-3.5 right-3.5">
-                                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=300" alt="Course" class="w-28 sm:w-32 h-18 sm:h-20 object-cover rounded-2xl border-2 border-white/60 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=300" alt="Course" class="w-24 sm:w-26 h-16 sm:h-18 object-cover rounded-xl border-2 border-white/60 shadow-sm">
                                 </div>
                                 
-                                <div class="pr-32 sm:pr-36 mt-1">
-                                    <h3 class="font-extrabold text-sm sm:text-base text-[#111812] leading-tight mb-1">
-                                        Practical Skills:<br>All Types of Retainers
+                                <div class="pr-26 sm:pr-28 mt-1">
+                                    <h3 class="font-extrabold text-sm text-[#111812] leading-tight mb-1">
+                                        Practical Skills:<br>All Retainers
                                     </h3>
-                                    <p class="text-xs sm:text-sm text-[#2A3B2C] font-semibold leading-tight">การทำรีเทนเนอร์ทุกประเภท</p>
+                                    <p class="text-xs text-[#2A3B2C] font-semibold leading-tight">ทำรีเทนเนอร์ทุกประเภท</p>
                                 </div>
 
-                                <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-xs sm:text-sm text-[#2A3B2C] font-bold">30 Lessons</span>
-                                    <div class="flex -space-x-2">
-                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
+                                <div class="flex items-center justify-between pt-3 mt-auto">
+                                    <span class="text-xs text-[#2A3B2C] font-bold">30 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Card 4 -->
-                            <div class="bg-[#B3C4A1] p-4 sm:p-5 rounded-[28px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[190px]">
+                            <div class="bg-[#B3C4A1] p-4 rounded-[26px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[185px]">
                                 <div class="flex justify-between items-start">
-                                    <span class="text-2xl text-[#34523C]"><i class="fa-solid fa-cube"></i></span>
-                                    <span class="bg-white/90 text-[#111812] text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-sm">
-                                        <i class="fa-solid fa-star text-amber-500 text-[10px]"></i> 4.9
+                                    <span class="text-xl text-[#34523C]"><i class="fa-solid fa-cube"></i></span>
+                                    <span class="bg-white/90 text-[#111812] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                                        <i class="fa-solid fa-star text-amber-500 text-[9px]"></i> 4.9
                                     </span>
                                 </div>
                                 
                                 <div class="absolute top-3.5 right-3.5">
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300" alt="Course" class="w-28 sm:w-32 h-18 sm:h-20 object-cover rounded-2xl border-2 border-white/60 shadow-sm">
+                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300" alt="Course" class="w-24 sm:w-26 h-16 sm:h-18 object-cover rounded-xl border-2 border-white/60 shadow-sm">
                                 </div>
                                 
-                                <div class="pr-32 sm:pr-36 mt-1">
-                                    <h3 class="font-extrabold text-sm sm:text-base text-[#111812] leading-tight mb-1">
-                                        Advanced Techniques
+                                <div class="pr-26 sm:pr-28 mt-1">
+                                    <h3 class="font-extrabold text-sm text-[#111812] leading-tight mb-1">
+                                        Advanced<br>Techniques
                                     </h3>
-                                    <p class="text-xs sm:text-sm text-[#2A3B2C] font-semibold leading-tight">เทคนิคขั้นสูง</p>
+                                    <p class="text-xs text-[#2A3B2C] font-semibold leading-tight">เทคนิคขั้นสูง</p>
                                 </div>
 
-                                <div class="flex items-center justify-between pt-2 mt-auto">
-                                    <span class="text-xs sm:text-sm text-[#2A3B2C] font-bold">16 Lessons</span>
-                                    <div class="flex -space-x-2">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
-                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-6 h-6 rounded-full border-2 border-[#B3C4A1] object-cover">
+                                <div class="flex items-center justify-between pt-3 mt-auto">
+                                    <span class="text-xs text-[#2A3B2C] font-bold">16 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 (เพิ่มใหม่) -->
+                            <div class="bg-[#B3C4A1] p-4 rounded-[26px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[185px]">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-xl text-[#34523C]"><i class="fa-solid fa-[#34523C] fa-drafting-compass"></i></span>
+                                    <span class="bg-white/90 text-[#111812] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                                        <i class="fa-solid fa-star text-amber-500 text-[9px]"></i> 4.7
+                                    </span>
+                                </div>
+                                
+                                <div class="absolute top-3.5 right-3.5">
+                                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=300" alt="Course" class="w-24 sm:w-26 h-16 sm:h-18 object-cover rounded-xl border-2 border-white/60 shadow-sm">
+                                </div>
+                                
+                                <div class="pr-26 sm:pr-28 mt-1">
+                                    <h3 class="font-extrabold text-sm text-[#111812] leading-tight mb-1">
+                                        Orthodontic<br>Appliance Design
+                                    </h3>
+                                    <p class="text-xs text-[#2A3B2C] font-semibold leading-tight">ออกแบบเครื่องมือทันตกรรม</p>
+                                </div>
+
+                                <div class="flex items-center justify-between pt-3 mt-auto">
+                                    <span class="text-xs text-[#2A3B2C] font-bold">20 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 (เพิ่มใหม่) -->
+                            <div class="bg-[#B3C4A1] p-4 rounded-[26px] flex flex-col justify-between relative shadow-sm hover:shadow-md transition min-h-[185px]">
+                                <div class="flex justify-between items-start">
+                                    <span class="text-xl text-[#34523C]"><i class="fa-solid fa-print"></i></span>
+                                    <span class="bg-white/90 text-[#111812] text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                                        <i class="fa-solid fa-star text-amber-500 text-[9px]"></i> 5.0
+                                    </span>
+                                </div>
+                                
+                                <div class="absolute top-3.5 right-3.5">
+                                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=300" alt="Course" class="w-24 sm:w-26 h-16 sm:h-18 object-cover rounded-xl border-2 border-white/60 shadow-sm">
+                                </div>
+                                
+                                <div class="pr-26 sm:pr-28 mt-1">
+                                    <h3 class="font-extrabold text-sm text-[#111812] leading-tight mb-1">
+                                        3D Printing &<br>Clear Aligners
+                                    </h3>
+                                    <p class="text-xs text-[#2A3B2C] font-semibold leading-tight">พิมพ์ 3D และชิ้นงานใส</p>
+                                </div>
+
+                                <div class="flex items-center justify-between pt-3 mt-auto">
+                                    <span class="text-xs text-[#2A3B2C] font-bold">18 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 rounded-full border border-[#B3C4A1] object-cover">
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +328,7 @@
                     </div>
                 </main>
 
-                <!-- 3. Right Sidebar Area (โทนสีเขียวพาสเทลอ่อน) -->
+                <!-- 3. Right Sidebar Area -->
                 <aside class="w-full lg:w-[330px] xl:w-[360px] bg-[#C2D1B2] p-4 rounded-[30px] lg:rounded-[36px] flex flex-col justify-between space-y-3.5 shrink-0 overflow-y-auto scrollbar-hide shadow-sm">
                     
                     <!-- Profile Box - Dr. Anantaporn -->
@@ -263,7 +338,6 @@
                             <button class="text-[#111812] hover:text-black transition text-lg p-1"><i class="fa-solid fa-gear"></i></button>
                         </div>
                         
-                        <!-- Profile Image -->
                         <div class="w-18 h-18 sm:w-22 sm:h-22 rounded-full overflow-hidden border-4 border-white shadow-md mb-2">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300" alt="Dr. Anantaporn" class="w-full h-full object-cover">
                         </div>
@@ -306,7 +380,7 @@
                             </button>
                         </div>
 
-                        <!-- Bar Chart (ตรงตามสไตล์รูปภาพล่าสุด) -->
+                        <!-- Bar Chart -->
                         <div class="flex items-end justify-between h-24 pt-3 px-1 gap-1.5">
                             <div class="flex flex-col items-center gap-1 flex-1">
                                 <div class="w-full bg-[#B3C4A1] rounded-full h-12"></div>
@@ -347,7 +421,6 @@
                             Your Courses / <span class="font-medium text-[#3E4E3F]">หลักสูตรของคุณ</span>
                         </h3>
                         <div class="space-y-2.5">
-                            <!-- Course Item 1 -->
                             <div class="bg-white/90 p-2.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
                                 <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-12 h-12 rounded-xl object-cover shrink-0">
                                 <div class="flex-1 min-w-0">
@@ -359,7 +432,6 @@
                                 </div>
                             </div>
 
-                            <!-- Course Item 2 -->
                             <div class="bg-white/90 p-2.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
                                 <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-12 h-12 rounded-xl object-cover shrink-0">
                                 <div class="flex-1 min-w-0">
@@ -376,7 +448,7 @@
 
             </div>
 
-            <!-- 4. Footer Section (สีเขียวเข้ม #34523C และฟอนต์ใหญ่ชัดเจน) -->
+            <!-- 4. Footer Section -->
             <footer class="w-full bg-[#34523C] text-[#EAEFE2] p-2.5 px-5 lg:px-8 text-xs sm:text-sm font-semibold flex flex-col sm:flex-row justify-between items-center gap-2.5 rounded-2xl shrink-0 shadow-md">
                 <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                     <a href="#" class="flex items-center gap-1.5 hover:text-[#B3C4A1] transition"><i class="fa-solid fa-phone text-xs"></i> Contact info</a>
