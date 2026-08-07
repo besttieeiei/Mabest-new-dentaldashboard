@@ -110,7 +110,6 @@
                 
                 <!-- Header Section -->
                 <div class="space-y-4">
-                    <!-- ประโยค Welcome ปรับเป็น font-bold ตามต้องการ -->
                     <h1 class="heading-font text-4xl sm:text-5xl xl:text-6xl font-bold text-[#0A121A] leading-[1.05]">
                         Welcome to<br>
                         Online Wire Bending &<br>
@@ -311,11 +310,11 @@
                 </div>
             </main>
 
-            <!-- 3. Right Sidebar Area -->
-            <aside class="w-full lg:w-[330px] xl:w-[360px] bg-[#C2D1B2] p-4 rounded-[30px] lg:rounded-[36px] flex flex-col justify-between space-y-3.5 shrink-0 overflow-y-auto scrollbar-hide shadow-sm">
+            <!-- 3. Right Sidebar Area (ปรับแก้ขนาดพื้นที่ Activity & Your Courses ให้สมดุลเต็มกรอบ) -->
+            <aside class="w-full lg:w-[330px] xl:w-[360px] bg-[#C2D1B2] p-4 lg:p-4.5 rounded-[30px] lg:rounded-[36px] flex flex-col justify-between gap-4 shrink-0 overflow-y-auto scrollbar-hide shadow-sm h-full">
                 
                 <!-- Guest User Profile Box -->
-                <div class="flex flex-col items-center pt-1">
+                <div class="flex flex-col items-center shrink-0">
                     <div class="w-full flex justify-between items-center mb-1">
                         <button class="text-[#111812] hover:text-black transition text-lg p-1"><i class="fa-regular fa-bell"></i></button>
                         <button class="text-[#111812] hover:text-black transition text-lg p-1"><i class="fa-solid fa-gear"></i></button>
@@ -327,10 +326,10 @@
                     </div>
                     
                     <h3 class="text-lg font-bold text-[#111812] tracking-tight">Guest User</h3>
-                    <p class="text-xs text-[#3E4E3F] mb-4 font-medium">กรุณาเข้าสู่ระบบเพื่อเรียนต่อ</p>
+                    <p class="text-xs text-[#3E4E3F] mb-3 font-medium">กรุณาเข้าสู่ระบบเพื่อเรียนต่อ</p>
 
                     <!-- Log In & Sign In Action Buttons -->
-                    <div class="grid grid-cols-2 gap-2.5 w-full mb-3.5">
+                    <div class="grid grid-cols-2 gap-2.5 w-full mb-3">
                         <button onclick="toggleDrawer()" class="bg-[#34523C] hover:bg-[#273E2D] text-white font-bold py-2.5 px-3 rounded-2xl flex items-center justify-center gap-2 text-sm shadow-sm transition">
                             <i class="fa-solid fa-right-to-bracket text-xs"></i> Log In
                         </button>
@@ -357,9 +356,9 @@
                     </div>
                 </div>
 
-                <!-- Activity Chart Section -->
-                <div class="bg-white/95 backdrop-blur-sm p-4 rounded-[24px] shadow-sm">
-                    <div class="flex justify-between items-center mb-3">
+                <!-- Activity Chart Section (ขยายเต็มสัดส่วนส่วนกลาง) -->
+                <div class="flex-1 bg-white/95 backdrop-blur-sm p-4 rounded-[24px] shadow-sm flex flex-col justify-between min-h-[180px]">
+                    <div class="flex justify-between items-center mb-2">
                         <div>
                             <span class="text-xs text-[#3E4E3F] block font-semibold">Activity</span>
                             <div class="flex items-center gap-2 mt-0.5">
@@ -374,64 +373,64 @@
                         </button>
                     </div>
 
-                    <!-- Bar Chart -->
-                    <div class="flex items-end justify-between h-24 pt-3 px-1 gap-1.5">
-                        <div class="flex flex-col items-center gap-1 flex-1">
-                            <div class="w-full bg-[#B3C4A1] rounded-full h-12"></div>
-                            <span class="text-[10px] text-[#3E4E3F] font-bold">Jan</span>
+                    <!-- Bar Chart (ยืดสูงเต็มความสูงของกล่อง) -->
+                    <div class="flex items-end justify-between flex-1 pt-2 pb-1 px-1 gap-1.5 min-h-[100px]">
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#B3C4A1] rounded-full h-[55%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Jan</span>
                         </div>
-                        <div class="flex flex-col items-center gap-1 flex-1">
-                            <div class="w-full bg-[#34523C] rounded-full h-16"></div>
-                            <span class="text-[10px] text-[#3E4E3F] font-bold">Jan</span>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#34523C] rounded-full h-[80%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Jan</span>
                         </div>
-                        <div class="flex flex-col items-center gap-1 flex-1">
-                            <div class="w-full bg-[#B3C4A1] rounded-full h-10"></div>
-                            <span class="text-[10px] text-[#3E4E3F] font-bold">Aug</span>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#B3C4A1] rounded-full h-[45%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Aug</span>
                         </div>
-                        <div class="flex flex-col items-center gap-1 flex-1">
-                            <div class="w-full bg-[#34523C] rounded-full h-20"></div>
-                            <span class="text-[10px] text-[#3E4E3F] font-bold">Sep</span>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#34523C] rounded-full h-[95%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Sep</span>
                         </div>
-                        <div class="flex flex-col items-center gap-1 flex-1">
-                            <div class="w-full bg-[#B3C4A1] rounded-full h-8"></div>
-                            <span class="text-[10px] text-[#3E4E3F] font-bold">Oct</span>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#B3C4A1] rounded-full h-[40%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Oct</span>
                         </div>
-                        <div class="flex flex-col items-center gap-1 flex-1">
-                            <div class="w-full bg-[#B3C4A1]/60 rounded-full h-6"></div>
-                            <span class="text-[10px] text-[#3E4E3F] font-bold">Nov</span>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#B3C4A1]/60 rounded-full h-[30%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Nov</span>
                         </div>
-                        <div class="flex flex-col items-center gap-1 flex-1">
-                            <div class="w-full bg-[#34523C] rounded-full h-20 relative flex items-center justify-center">
-                                <div class="absolute top-0 w-full bg-[#B3C4A1] h-8 rounded-t-full border-b border-[#34523C]"></div>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#34523C] rounded-full h-[95%] relative flex items-center justify-center overflow-hidden">
+                                <div class="absolute top-0 w-full bg-[#B3C4A1] h-[40%] rounded-t-full border-b border-[#34523C]"></div>
                             </div>
-                            <span class="text-[10px] bg-[#34523C] text-white px-1.5 py-0.5 rounded-full font-bold">Dec</span>
+                            <span class="text-[10px] bg-[#34523C] text-white px-1.5 py-0.5 rounded-full font-bold shrink-0">Dec</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Your Courses List -->
-                <div>
-                    <h3 class="text-sm sm:text-base font-bold text-[#111812] mb-2.5">
+                <!-- Your Courses List (ขยายขนาดเต็มสัดส่วนส่วนล่าง) -->
+                <div class="flex-1 flex flex-col justify-between min-h-[180px]">
+                    <h3 class="text-sm sm:text-base font-bold text-[#111812] mb-2 shrink-0">
                         Your Courses / <span class="font-medium text-[#3E4E3F]">หลักสูตรของคุณ</span>
                     </h3>
-                    <div class="space-y-2.5">
-                        <div class="bg-white/90 p-2.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
-                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-12 h-12 rounded-xl object-cover shrink-0">
-                            <div class="flex-1 min-w-0">
+                    <div class="flex-1 flex flex-col justify-between gap-2.5">
+                        <div class="flex-1 bg-white/90 p-3 sm:p-3.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0">
+                            <div class="flex-1 min-w-0 flex flex-col justify-center">
                                 <h4 class="text-xs sm:text-sm font-bold text-[#111812] leading-tight truncate">Wire Bending: Basic to</h4>
-                                <p class="text-xs font-medium text-[#3E4E3F] truncate">การดัดลวดพื้นฐานและขั้นสูง</p>
-                                <div class="w-full bg-gray-200 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                <p class="text-xs font-medium text-[#3E4E3F] truncate mt-0.5">การดัดลวดพื้นฐานและขั้นสูง</p>
+                                <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
                                     <div class="bg-[#34523C] h-full w-3/4 rounded-full"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-white/90 p-2.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
-                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-12 h-12 rounded-xl object-cover shrink-0">
-                            <div class="flex-1 min-w-0">
+                        <div class="flex-1 bg-white/90 p-3 sm:p-3.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0">
+                            <div class="flex-1 min-w-0 flex flex-col justify-center">
                                 <h4 class="text-xs sm:text-sm font-bold text-[#111812] leading-tight truncate">Digital Dentistry: CAD/CAM</h4>
-                                <p class="text-xs font-medium text-[#3E4E3F] truncate">สำหรับรีเทนเนอร์</p>
-                                <div class="w-full bg-gray-200 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                <p class="text-xs font-medium text-[#3E4E3F] truncate mt-0.5">สำหรับรีเทนเนอร์</p>
+                                <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
                                     <div class="bg-[#34523C] h-full w-1/2 rounded-full"></div>
                                 </div>
                             </div>
@@ -444,7 +443,7 @@
 
     </div>
 
-    <!-- 4. Footer Section (ขยายเต็มขอบหน้าจอ แนบขอบล่าง แบบรูปที่ 2) -->
+    <!-- 4. Footer Section (ขยายเต็มขอบหน้าจอ แนบขอบล่าง) -->
     <footer class="w-full -mx-2 sm:-mx-3 lg:-mx-4 w-[calc(100%+1rem)] sm:w-[calc(100%+1.5rem)] lg:w-[calc(100%+2rem)] bg-[#34523C] text-[#EAEFE2] py-2.5 px-6 lg:px-12 text-xs sm:text-sm font-semibold flex flex-col sm:flex-row justify-between items-center gap-2.5 rounded-t-[20px] rounded-b-none shrink-0 shadow-md">
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <a href="#" class="flex items-center gap-1.5 hover:text-[#B3C4A1] transition"><i class="fa-solid fa-phone text-xs"></i> Contact info</a>
