@@ -11,45 +11,31 @@
     <!-- Google Font (Kanit & Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'Kanit', 'sans-serif'],
-                    },
-                    colors: {
-                        bgMain: '#DDE5B6',
-                        dashboardBg: '#ECEFE6',
-                        sidebarBg: '#2D5A43',
-                        accentGreen: '#A3B18A',
-                        lightPill: '#D8E2DC',
-                        cardBg: '#D5DFCA',
-                        darkGreen: '#1C3124'
-                    }
-                }
-            }
+    <style>
+        body {
+            font-family: 'Inter', 'Kanit', sans-serif;
+            background-color: #A0C1B8; /* พื้นหลังภายนอกสุดสีเขียวอ่อนนุ่ม */
         }
-    </script>
+    </style>
 </head>
-<body class="bg-[#B9CDB3] min-h-screen p-4 md:p-8 font-sans flex items-center justify-center">
+<body class="min-h-screen p-4 md:p-8 flex items-center justify-center">
 
-    <!-- Container หลักแบบ Rounded Screen -->
-    <div class="w-full max-w-[1400px] bg-dashboardBg rounded-[32px] shadow-2xl overflow-hidden flex flex-col justify-between">
+    <!-- Container หลัก (พื้นหลังสีครีมเขียวแบบในภาพต้นฉบับ) -->
+    <div class="w-full max-w-[1400px] bg-[#E3E8D8] text-gray-900 rounded-[32px] shadow-2xl overflow-hidden flex flex-col justify-between">
         
         <!-- Upper Content Area -->
         <div class="flex flex-col lg:flex-row p-4 gap-6">
             
-            <!-- 1. Left Sidebar Navigation -->
-            <aside class="w-full lg:w-20 bg-sidebarBg rounded-[24px] p-4 flex flex-row lg:flex-col items-center justify-between gap-6">
+            <!-- 1. Left Sidebar Navigation (สีเขียวเข้ม) -->
+            <aside class="w-full lg:w-20 bg-[#355245] rounded-[24px] p-4 flex flex-row lg:flex-col items-center justify-between gap-6 shrink-0">
                 <!-- Logo -->
-                <div class="w-12 h-12 rounded-full flex items-center justify-center text-accentGreen text-2xl font-bold">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center text-[#A3B18A] text-2xl font-bold">
                     <i class="fa-solid fa-tooth"></i>
                 </div>
                 
                 <!-- Nav Icons -->
                 <div class="flex lg:flex-col items-center gap-4">
-                    <button class="w-12 h-12 bg-accentGreen text-darkGreen rounded-full flex items-center justify-center text-lg hover:opacity-90">
+                    <button class="w-12 h-12 bg-[#95B095] text-[#1C3124] rounded-full flex items-center justify-center text-lg hover:opacity-90">
                         <i class="fa-solid fa-house"></i>
                     </button>
                     <button class="w-12 h-12 bg-white/10 text-white rounded-full flex items-center justify-center text-lg hover:bg-white/20">
@@ -80,35 +66,35 @@
 
             <!-- 2. Main Middle Area -->
             <main class="flex-1 space-y-6 px-2">
-                <!-- Welcome Title -->
-                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight max-w-2xl">
-                    Welcome Dr. Anantaporn to<br>
+                <!-- Welcome Title (เอาชื่อ Dr. Anantaporn ออกแล้ว) -->
+                <h1 class="text-3xl md:text-5xl font-bold text-[#1A2E22] leading-tight tracking-tight max-w-2xl pt-2">
+                    Welcome to<br>
                     Online Wire Bending &<br>
                     CAD/CAM Training
                 </h1>
 
                 <!-- Category Filters -->
                 <div class="flex flex-wrap items-center gap-3 pt-2">
-                    <button class="flex items-center gap-2 bg-sidebarBg text-white px-5 py-2.5 rounded-full font-medium text-sm">
+                    <button class="flex items-center gap-2 bg-[#355245] text-white px-5 py-2.5 rounded-full font-medium text-sm">
                         <i class="fa-solid fa-border-all"></i> All
                     </button>
-                    <button class="flex items-center gap-2 bg-cardBg hover:bg-accentGreen/50 text-gray-800 px-5 py-2.5 rounded-full font-medium text-sm transition">
+                    <button class="flex items-center gap-2 bg-[#CAD5C5] hover:bg-[#B2C2AD] text-gray-800 px-5 py-2.5 rounded-full font-medium text-sm transition">
                         <i class="fa-solid fa-wave-square"></i> Wire Bending
                     </button>
-                    <button class="flex items-center gap-2 bg-cardBg hover:bg-accentGreen/50 text-gray-800 px-5 py-2.5 rounded-full font-medium text-sm transition">
+                    <button class="flex items-center gap-2 bg-[#CAD5C5] hover:bg-[#B2C2AD] text-gray-800 px-5 py-2.5 rounded-full font-medium text-sm transition">
                         <i class="fa-solid fa-tooth"></i> CAD/CAM
                     </button>
-                    <button class="flex items-center gap-2 bg-cardBg hover:bg-accentGreen/50 text-gray-800 px-5 py-2.5 rounded-full font-medium text-sm transition">
+                    <button class="flex items-center gap-2 bg-[#CAD5C5] hover:bg-[#B2C2AD] text-gray-800 px-5 py-2.5 rounded-full font-medium text-sm transition">
                         <i class="fa-solid fa-shield-halved"></i> Retention
                     </button>
-                    <button class="flex items-center gap-2 bg-cardBg hover:bg-accentGreen/50 text-gray-800 px-5 py-2.5 rounded-full font-medium text-sm transition">
+                    <button class="flex items-center gap-2 bg-[#CAD5C5] hover:bg-[#B2C2AD] text-gray-800 px-5 py-2.5 rounded-full font-medium text-sm transition">
                         <i class="fa-solid fa-cube"></i> Introductory
                     </button>
                 </div>
 
                 <!-- Featured Courses Section -->
-                <div>
-                    <h2 class="text-xl font-bold text-gray-800 mb-4">
+                <div class="pt-2">
+                    <h2 class="text-xl font-bold text-[#1A2E22] mb-4">
                         Featured Courses / <span class="font-normal text-gray-700">หลักสูตรแนะนำ</span>
                     </h2>
 
@@ -116,14 +102,14 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         
                         <!-- Course Card 1 -->
-                        <div class="bg-cardBg p-5 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden">
+                        <div class="bg-[#C3D0BD] p-5 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden">
                             <div class="flex justify-between items-start">
-                                <span class="text-2xl text-sidebarBg"><i class="fa-solid fa-wave-square"></i></span>
+                                <span class="text-2xl text-[#355245]"><i class="fa-solid fa-wave-square"></i></span>
                                 <span class="bg-white/80 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
                                     ★ 4.8
                                 </span>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-white/40">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-white/40 shadow-sm">
                             <div>
                                 <h3 class="font-bold text-lg text-gray-900 leading-snug">
                                     Wire Bending:<br>
@@ -131,7 +117,7 @@
                                     <span class="text-sm font-normal text-gray-700">การดัดลวดพื้นฐานและขั้นสูง</span>
                                 </h3>
                                 <div class="flex items-center justify-between mt-3">
-                                    <span class="text-xs text-gray-600 font-medium">24 Lessons</span>
+                                    <span class="text-xs text-gray-700 font-medium">24 Lessons</span>
                                     <div class="flex -space-x-2">
                                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-6 h-6 rounded-full border border-white">
                                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-6 h-6 rounded-full border border-white">
@@ -141,14 +127,14 @@
                         </div>
 
                         <!-- Course Card 2 -->
-                        <div class="bg-cardBg p-5 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden">
+                        <div class="bg-[#C3D0BD] p-5 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden">
                             <div class="flex justify-between items-start">
-                                <span class="text-2xl text-sidebarBg"><i class="fa-solid fa-tooth"></i></span>
+                                <span class="text-2xl text-[#355245]"><i class="fa-solid fa-tooth"></i></span>
                                 <span class="bg-white/80 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
                                     ★ 4.9
                                 </span>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=300" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-white/40">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=300" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-white/40 shadow-sm">
                             <div>
                                 <h3 class="font-bold text-lg text-gray-900 leading-snug">
                                     Digital Dentistry:<br>
@@ -156,7 +142,7 @@
                                     <span class="text-sm font-normal text-gray-700">เทคโนโลยี CAD/CAM สำหรับรีเทนเนอร์</span>
                                 </h3>
                                 <div class="flex items-center justify-between mt-3">
-                                    <span class="text-xs text-gray-600 font-medium">16 Lessons</span>
+                                    <span class="text-xs text-gray-700 font-medium">16 Lessons</span>
                                     <div class="flex -space-x-2">
                                         <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-6 h-6 rounded-full border border-white">
                                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-6 h-6 rounded-full border border-white">
@@ -166,14 +152,14 @@
                         </div>
 
                         <!-- Course Card 3 -->
-                        <div class="bg-cardBg p-5 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden">
+                        <div class="bg-[#C3D0BD] p-5 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden">
                             <div class="flex justify-between items-start">
-                                <span class="text-2xl text-sidebarBg"><i class="fa-solid fa-cubes"></i></span>
+                                <span class="text-2xl text-[#355245]"><i class="fa-solid fa-cubes"></i></span>
                                 <span class="bg-white/80 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
                                     ★ 4.9
                                 </span>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=300" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-white/40">
+                            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=300" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-white/40 shadow-sm">
                             <div>
                                 <h3 class="font-bold text-lg text-gray-900 leading-snug">
                                     Practical Skills:<br>
@@ -181,7 +167,7 @@
                                     <span class="text-sm font-normal text-gray-700">การทำรีเทนเนอร์ทุกประเภท</span>
                                 </h3>
                                 <div class="flex items-center justify-between mt-3">
-                                    <span class="text-xs text-gray-600 font-medium">30 Lessons</span>
+                                    <span class="text-xs text-gray-700 font-medium">30 Lessons</span>
                                     <div class="flex -space-x-2">
                                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-6 h-6 rounded-full border border-white">
                                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-6 h-6 rounded-full border border-white">
@@ -191,21 +177,21 @@
                         </div>
 
                         <!-- Course Card 4 -->
-                        <div class="bg-cardBg p-5 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden">
+                        <div class="bg-[#C3D0BD] p-5 rounded-2xl flex flex-col justify-between h-56 relative overflow-hidden">
                             <div class="flex justify-between items-start">
-                                <span class="text-2xl text-sidebarBg"><i class="fa-solid fa-boxes-stacked"></i></span>
+                                <span class="text-2xl text-[#355245]"><i class="fa-solid fa-boxes-stacked"></i></span>
                                 <span class="bg-white/80 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
                                     ★ 4.9
                                 </span>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-white/40">
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300" alt="Course" class="absolute top-4 right-4 w-28 h-20 object-cover rounded-xl border border-white/40 shadow-sm">
                             <div>
                                 <h3 class="font-bold text-lg text-gray-900 leading-snug">
                                     Advanced Techniques<br>
                                     <span class="text-sm font-normal text-gray-700">เทคนิคขั้นสูง</span>
                                 </h3>
                                 <div class="flex items-center justify-between mt-3">
-                                    <span class="text-xs text-gray-600 font-medium">16 Lessons</span>
+                                    <span class="text-xs text-gray-700 font-medium">16 Lessons</span>
                                     <div class="flex -space-x-2">
                                         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-6 h-6 rounded-full border border-white">
                                         <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100" class="w-6 h-6 rounded-full border border-white">
@@ -219,20 +205,19 @@
             </main>
 
             <!-- 3. Right Sidebar Area -->
-            <aside class="w-full lg:w-80 space-y-6">
-                <!-- User Profile Header Card -->
-                <div class="bg-cardBg/60 p-4 rounded-2xl">
+            <aside class="w-full lg:w-80 space-y-6 shrink-0">
+                <!-- User Profile Header Card (เอาชื่อ Dr. Anantaporn ออกแล้ว) -->
+                <div class="bg-[#CAD5C5]/60 p-4 rounded-2xl">
                     <div class="flex justify-between items-center mb-2">
                         <button class="text-gray-600 hover:text-black"><i class="fa-regular fa-bell"></i></button>
                         <button class="text-gray-600 hover:text-black"><i class="fa-solid fa-gear"></i></button>
                     </div>
                     <div class="flex flex-col items-center">
-                        <img src="https://images.unsplash.com/photo-1594824813566-78853b47f48a?w=150" class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-white">
-                        <h2 class="font-bold text-lg text-gray-900">Dr. Anantaporn</h2>
-                        <span class="text-xs text-gray-500">Your Profile</span>
+                        <img src="https://images.unsplash.com/photo-1594824813566-78853b47f48a?w=150" class="w-16 h-16 rounded-full object-cover mb-2 border-2 border-white shadow-sm">
+                        <span class="text-xs text-gray-600 font-medium">Your Profile</span>
                     </div>
                     <!-- Colleagues -->
-                    <div class="bg-white/60 mt-4 p-2.5 rounded-xl flex items-center justify-between">
+                    <div class="bg-white/70 mt-4 p-2.5 rounded-xl flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <i class="fa-solid fa-user-group text-gray-600 text-sm"></i>
                             <span class="text-xs font-semibold text-gray-800">274 Colleagues</span>
@@ -248,49 +233,49 @@
                 </div>
 
                 <!-- Activity Chart Card -->
-                <div class="bg-white p-4 rounded-2xl shadow-sm">
+                <div class="bg-[#F4F6F0] p-4 rounded-2xl shadow-sm">
                     <div class="flex justify-between items-center mb-4">
                         <div>
                             <span class="text-xs text-gray-500 block">Activity</span>
                             <div class="flex items-center gap-2">
-                                <span class="text-2xl font-bold">3.5h</span>
-                                <span class="bg-yellow-100 text-yellow-800 text-[10px] font-semibold px-2 py-0.5 rounded-full">👍 Practice Hours</span>
+                                <span class="text-2xl font-bold text-gray-900">3.5h</span>
+                                <span class="bg-[#DCE7AD] text-gray-800 text-[10px] font-semibold px-2 py-0.5 rounded-full">👍 Practice Hours</span>
                             </div>
                         </div>
-                        <button class="text-xs border px-2 py-1 rounded-lg text-gray-600 flex items-center gap-1">
+                        <button class="text-xs border border-gray-300 bg-white px-2 py-1 rounded-lg text-gray-600 flex items-center gap-1">
                             Year <i class="fa-solid fa-chevron-down text-[10px]"></i>
                         </button>
                     </div>
 
-                    <!-- Custom Bar Chart Simulation -->
+                    <!-- Custom Bar Chart -->
                     <div class="flex items-end justify-between h-28 pt-4 px-2">
                         <div class="flex flex-col items-center gap-1">
-                            <div class="w-6 bg-accentGreen/60 rounded-t-lg h-16"></div>
-                            <span class="text-[10px] text-gray-400">Jan</span>
+                            <div class="w-6 bg-[#95B095] rounded-t-lg h-16"></div>
+                            <span class="text-[10px] text-gray-500">Jan</span>
                         </div>
                         <div class="flex flex-col items-center gap-1">
-                            <div class="w-6 bg-sidebarBg rounded-t-lg h-20"></div>
-                            <span class="text-[10px] text-gray-400">Jan</span>
+                            <div class="w-6 bg-[#355245] rounded-t-lg h-20"></div>
+                            <span class="text-[10px] text-gray-500">Jan</span>
                         </div>
                         <div class="flex flex-col items-center gap-1">
-                            <div class="w-6 bg-accentGreen/60 rounded-t-lg h-12"></div>
-                            <span class="text-[10px] text-gray-400">Aug</span>
+                            <div class="w-6 bg-[#95B095] rounded-t-lg h-12"></div>
+                            <span class="text-[10px] text-gray-500">Aug</span>
                         </div>
                         <div class="flex flex-col items-center gap-1">
-                            <div class="w-6 bg-sidebarBg rounded-t-lg h-24"></div>
-                            <span class="text-[10px] text-gray-400">Sep</span>
+                            <div class="w-6 bg-[#355245] rounded-t-lg h-24"></div>
+                            <span class="text-[10px] text-gray-500">Sep</span>
                         </div>
                         <div class="flex flex-col items-center gap-1">
-                            <div class="w-6 bg-accentGreen/60 rounded-t-lg h-10"></div>
-                            <span class="text-[10px] text-gray-400">Oct</span>
+                            <div class="w-6 bg-[#95B095] rounded-t-lg h-10"></div>
+                            <span class="text-[10px] text-gray-500">Oct</span>
                         </div>
                         <div class="flex flex-col items-center gap-1">
-                            <div class="w-6 bg-accentGreen/40 rounded-t-lg h-8"></div>
-                            <span class="text-[10px] text-gray-400">Nov</span>
+                            <div class="w-6 bg-[#A3B18A]/50 rounded-t-lg h-8"></div>
+                            <span class="text-[10px] text-gray-500">Nov</span>
                         </div>
                         <div class="flex flex-col items-center gap-1">
-                            <div class="w-6 bg-sidebarBg rounded-t-lg h-20"></div>
-                            <span class="text-[10px] bg-sidebarBg text-white px-1 rounded">Dec</span>
+                            <div class="w-6 bg-[#355245] rounded-t-lg h-20"></div>
+                            <span class="text-[10px] bg-[#355245] text-white px-1 rounded">Dec</span>
                         </div>
                     </div>
                 </div>
@@ -302,34 +287,34 @@
                     </h3>
                     <div class="space-y-3">
                         <!-- Progress Card 1 -->
-                        <div class="bg-cardBg/70 p-3 rounded-xl flex items-center gap-3">
+                        <div class="bg-[#CAD5C5]/70 p-3 rounded-xl flex items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-12 h-12 rounded-lg object-cover">
                             <div class="flex-1">
                                 <h4 class="text-xs font-bold text-gray-900 leading-tight">Wire Bending: Basic to<br><span class="font-normal text-gray-700">การดัดลวดพื้นฐานและขั้นสูง</span></h4>
                                 <div class="w-full bg-gray-300 h-1.5 rounded-full mt-2 overflow-hidden">
-                                    <div class="bg-sidebarBg h-full w-2/3 rounded-full"></div>
+                                    <div class="bg-[#355245] h-full w-2/3 rounded-full"></div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Progress Card 2 -->
-                        <div class="bg-cardBg/70 p-3 rounded-xl flex items-center gap-3">
+                        <div class="bg-[#CAD5C5]/70 p-3 rounded-xl flex items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-12 h-12 rounded-lg object-cover">
                             <div class="flex-1">
                                 <h4 class="text-xs font-bold text-gray-900">Digital Dentistry: CAD/CAM for Retainers</h4>
                                 <div class="w-full bg-gray-300 h-1.5 rounded-full mt-2 overflow-hidden">
-                                    <div class="bg-sidebarBg h-full w-1/2 rounded-full"></div>
+                                    <div class="bg-[#355245] h-full w-1/2 rounded-full"></div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Progress Card 3 -->
-                        <div class="bg-cardBg/70 p-3 rounded-xl flex items-center gap-3">
+                        <div class="bg-[#CAD5C5]/70 p-3 rounded-xl flex items-center gap-3">
                             <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=150" class="w-12 h-12 rounded-lg object-cover">
                             <div class="flex-1">
                                 <h4 class="text-xs font-bold text-gray-900">CAD/CAM</h4>
                                 <div class="w-full bg-gray-300 h-1.5 rounded-full mt-2 overflow-hidden">
-                                    <div class="bg-sidebarBg h-full w-1/4 rounded-full"></div>
+                                    <div class="bg-[#355245] h-full w-1/4 rounded-full"></div>
                                 </div>
                             </div>
                         </div>
@@ -339,8 +324,8 @@
 
         </div>
 
-        <!-- 4. Dark Footer Section -->
-        <footer class="bg-darkGreen text-white/80 p-4 px-8 text-xs flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/10">
+        <!-- 4. Dark Footer Section (สีเขียวเข้ม) -->
+        <footer class="bg-[#243B30] text-white/80 p-4 px-8 text-xs flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/10">
             <div class="flex flex-wrap items-center gap-6">
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone"></i> Contact info</span>
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-envelope"></i> Resources</span>
