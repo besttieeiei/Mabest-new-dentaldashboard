@@ -11,6 +11,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- CSS ล็อคค่าสีและทรงตามภาพต้นฉบับ -->
     <style>
         body {
             font-family: 'Inter', 'Kanit', sans-serif;
@@ -24,129 +25,186 @@
         .bg-pill-btn { background-color: #BDCBAD !important; }
         .bg-right-sidebar { background-color: #C0CCA8 !important; }
         .text-dark-green { color: #1C3124 !important; }
+        
+        /* ซ่อน Scrollbar แถบตัวเลือกบนมือถือ */
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
-<body class="min-h-screen p-2 sm:p-4 md:p-8 flex items-center justify-center overflow-x-hidden">
+<body class="min-h-screen p-2 sm:p-4 lg:p-8 flex items-center justify-center overflow-x-hidden">
 
-    <!-- Container หลัก -->
-    <div class="w-full max-w-[1380px] bg-dashboard-main rounded-[24px] sm:rounded-[36px] shadow-2xl overflow-hidden flex flex-col justify-between">
+    <!-- Dashboard Container -->
+    <div class="w-full max-w-[1340px] bg-dashboard-main rounded-[24px] lg:rounded-[36px] shadow-2xl overflow-hidden flex flex-col justify-between">
         
         <!-- Content Area -->
-        <div class="flex flex-col lg:flex-row p-3 sm:p-5 gap-4 lg:gap-6">
+        <div class="flex flex-col lg:flex-row p-3 lg:p-6 gap-4 lg:gap-6">
             
             <!-- 1. Left Sidebar Navigation -->
-            <aside class="w-full lg:w-20 bg-sidebar-dark rounded-[20px] sm:rounded-[28px] p-3 sm:p-4 flex flex-row lg:flex-col items-center justify-between gap-4 shrink-0 overflow-x-auto">
+            <aside class="w-full lg:w-[72px] bg-sidebar-dark rounded-[20px] lg:rounded-[28px] p-3 lg:py-5 lg:px-3 flex flex-row lg:flex-col items-center justify-between gap-4 shrink-0 overflow-x-auto scrollbar-hide">
                 <!-- Logo -->
-                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center text-[#90A77A] text-xl sm:text-2xl font-bold shrink-0">
+                <div class="w-10 h-10 lg:w-11 lg:h-11 rounded-full flex items-center justify-center text-[#90A77A] text-xl lg:text-2xl font-bold shrink-0">
                     <i class="fa-solid fa-tooth"></i>
                 </div>
                 
                 <!-- Nav Icons -->
-                <div class="flex lg:flex-col items-center gap-2 sm:gap-4 shrink-0">
-                    <button class="w-10 h-10 sm:w-12 sm:h-12 bg-[#90A77A] text-dark-green rounded-full flex items-center justify-center text-base sm:text-lg hover:opacity-90">
+                <div class="flex lg:flex-col items-center gap-2 lg:gap-3 shrink-0">
+                    <button class="w-10 h-10 lg:w-11 lg:h-11 bg-[#90A77A] text-dark-green rounded-full flex items-center justify-center text-base lg:text-lg hover:opacity-90 transition">
                         <i class="fa-solid fa-house"></i>
                     </button>
-                    <button class="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 text-white rounded-full flex items-center justify-center text-base sm:text-lg hover:bg-white/20">
+                    <button class="w-10 h-10 lg:w-11 lg:h-11 bg-white/10 text-white rounded-full flex items-center justify-center text-base lg:text-lg hover:bg-white/20 transition">
                         <i class="fa-regular fa-calendar-days"></i>
                     </button>
-                    <button class="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 text-white rounded-full flex items-center justify-center text-base sm:text-lg hover:bg-white/20">
+                    <button class="w-10 h-10 lg:w-11 lg:h-11 bg-white/10 text-white rounded-full flex items-center justify-center text-base lg:text-lg hover:bg-white/20 transition">
                         <i class="fa-solid fa-calendar-minus"></i>
                     </button>
-                    <button class="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 text-white rounded-full flex items-center justify-center text-base sm:text-lg hover:bg-white/20">
+                    <button class="w-10 h-10 lg:w-11 lg:h-11 bg-white/10 text-white rounded-full flex items-center justify-center text-base lg:text-lg hover:bg-white/20 transition">
                         <i class="fa-regular fa-file-lines"></i>
                     </button>
-                    <button class="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 text-white rounded-full flex items-center justify-center text-base sm:text-lg hover:bg-white/20">
+                    <button class="w-10 h-10 lg:w-11 lg:h-11 bg-white/10 text-white rounded-full flex items-center justify-center text-base lg:text-lg hover:bg-white/20 transition">
                         <i class="fa-regular fa-user"></i>
+                    </button>
+                    <button class="w-10 h-10 lg:w-11 lg:h-11 bg-white/10 text-white rounded-full flex items-center justify-center text-base lg:text-lg hover:bg-white/20 transition">
+                        <i class="fa-regular fa-envelope"></i>
                     </button>
                 </div>
 
                 <!-- Bottom Profile Nav -->
-                <div class="flex lg:flex-col items-center gap-2 sm:gap-4 mt-0 lg:mt-auto shrink-0">
-                    <button class="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 text-white rounded-full flex items-center justify-center text-base sm:text-lg hover:bg-white/20">
+                <div class="flex lg:flex-col items-center gap-2 lg:gap-3 mt-0 lg:mt-auto shrink-0">
+                    <button class="w-10 h-10 lg:w-11 lg:h-11 bg-white/10 text-white rounded-full flex items-center justify-center text-base lg:text-lg hover:bg-white/20 transition">
                         <i class="fa-solid fa-gear"></i>
                     </button>
-                    <!-- รูป Profile ล็อคขนาดและสัดส่วนไว้แบบสี่เหลี่ยมจัตุรัสคงที่ ป้องกันการเบี้ยว -->
-                    <img src="https://images.unsplash.com/photo-1594824813566-78853b47f48a?w=150" alt="Profile" class="w-10 h-10 rounded-full border-2 border-white object-cover shrink-0">
+                    <img src="https://images.unsplash.com/photo-1594824813566-78853b47f48a?w=150" alt="Profile" class="w-10 h-10 lg:w-11 lg:h-11 rounded-full border-2 border-white object-cover shrink-0">
                 </div>
             </aside>
 
             <!-- 2. Main Middle Area -->
-            <main class="flex-1 space-y-4 sm:space-y-6 px-1">
-                <!-- Title -->
-                <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight tracking-tight max-w-2xl pt-2">
-                    Welcome to<br>
+            <main class="flex-1 space-y-4 lg:space-y-5 px-1">
+                <!-- Welcome Title -->
+                <h1 class="text-2xl sm:text-3xl lg:text-[40px] font-bold text-gray-900 leading-[1.15] tracking-tight max-w-2xl pt-1">
+                    Welcome Dr. Anantaporn to<br>
                     Online Wire Bending &<br>
                     CAD/CAM Training
                 </h1>
 
-                <!-- Category Filters (เลื่อนแนวนอนบนมือถือได้) -->
-                <div class="flex items-center gap-2 sm:gap-3 pt-1 overflow-x-auto pb-2 scrollbar-none">
-                    <button class="flex items-center gap-2 bg-sidebar-dark text-white px-4 sm:px-5 py-2 rounded-full font-medium text-xs sm:text-sm whitespace-nowrap">
-                        <i class="fa-solid fa-border-all"></i> All
+                <!-- Category Filters -->
+                <div class="flex items-center gap-2 lg:gap-2.5 pt-1 overflow-x-auto scrollbar-hide pb-1">
+                    <button class="flex items-center gap-2 bg-sidebar-dark text-white px-4 lg:px-4 py-2 rounded-full font-medium text-xs lg:text-xs whitespace-nowrap">
+                        <i class="fa-solid fa-border-all text-xs"></i> All
                     </button>
-                    <button class="flex items-center gap-2 bg-pill-btn text-gray-800 px-4 sm:px-5 py-2 rounded-full font-medium text-xs sm:text-sm whitespace-nowrap">
-                        <i class="fa-solid fa-wave-square"></i> Wire Bending
+                    <button class="flex items-center gap-2 bg-pill-btn text-gray-800 px-4 lg:px-4 py-2 rounded-full font-medium text-xs lg:text-xs whitespace-nowrap hover:opacity-80">
+                        <i class="fa-solid fa-wave-square text-xs"></i> Wire Bending
                     </button>
-                    <button class="flex items-center gap-2 bg-pill-btn text-gray-800 px-4 sm:px-5 py-2 rounded-full font-medium text-xs sm:text-sm whitespace-nowrap">
-                        <i class="fa-solid fa-tooth"></i> CAD/CAM
+                    <button class="flex items-center gap-2 bg-pill-btn text-gray-800 px-4 lg:px-4 py-2 rounded-full font-medium text-xs lg:text-xs whitespace-nowrap hover:opacity-80">
+                        <i class="fa-solid fa-tooth text-xs"></i> CAD/CAM
                     </button>
-                    <button class="flex items-center gap-2 bg-pill-btn text-gray-800 px-4 sm:px-5 py-2 rounded-full font-medium text-xs sm:text-sm whitespace-nowrap">
-                        <i class="fa-solid fa-shield-halved"></i> Retention
+                    <button class="flex items-center gap-2 bg-pill-btn text-gray-800 px-4 lg:px-4 py-2 rounded-full font-medium text-xs lg:text-xs whitespace-nowrap hover:opacity-80">
+                        <i class="fa-solid fa-shield-halved text-xs"></i> Retention
+                    </button>
+                    <button class="flex items-center gap-2 bg-pill-btn text-gray-800 px-4 lg:px-4 py-2 rounded-full font-medium text-xs lg:text-xs whitespace-nowrap hover:opacity-80">
+                        <i class="fa-solid fa-cube text-xs"></i> Introductory
                     </button>
                 </div>
 
                 <!-- Featured Courses Section -->
-                <div class="pt-2">
-                    <h2 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
+                <div class="pt-1">
+                    <h2 class="text-base sm:text-lg font-bold text-gray-900 mb-3">
                         Featured Courses / <span class="font-normal text-gray-700">หลักสูตรแนะนำ</span>
                     </h2>
 
-                    <!-- Cards Grid -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <!-- 4 Course Cards Grid (2x2 บนคอม) -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
                         
                         <!-- Course Card 1 -->
-                        <div class="bg-card-course p-4 sm:p-5 rounded-2xl sm:rounded-3xl flex flex-col justify-between min-h-[200px] relative overflow-hidden">
+                        <div class="bg-card-course p-4 lg:p-4 rounded-2xl lg:rounded-3xl flex flex-col justify-between h-44 lg:h-48 relative overflow-hidden">
                             <div class="flex justify-between items-start">
-                                <span class="text-xl sm:text-2xl text-sidebar-dark"><i class="fa-solid fa-wave-square"></i></span>
-                                <span class="bg-white/80 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <span class="text-xl lg:text-xl text-sidebar-dark"><i class="fa-solid fa-wave-square"></i></span>
+                                <span class="bg-white/80 text-[11px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
                                     ★ 4.8
                                 </span>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300" alt="Course" class="absolute top-4 right-4 w-20 h-16 sm:w-28 sm:h-20 object-cover rounded-xl border border-white/50 shadow-sm">
-                            <div class="mt-8 sm:mt-0">
-                                <h3 class="font-bold text-base sm:text-lg text-gray-900 leading-snug">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=300" alt="Course" class="absolute top-3.5 right-3.5 w-24 h-16 lg:w-28 lg:h-20 object-cover rounded-xl border border-white/50 shadow-sm">
+                            <div>
+                                <h3 class="font-bold text-sm lg:text-base text-gray-900 leading-snug">
                                     Wire Bending:<br> Basic to Advanced<br>
-                                    <span class="text-xs sm:text-sm font-normal text-gray-800">การดัดลวดพื้นฐานและขั้นสูง</span>
+                                    <span class="text-xs font-normal text-gray-800">การดัดลวดพื้นฐานและขั้นสูง</span>
                                 </h3>
-                                <div class="flex items-center justify-between mt-3">
-                                    <span class="text-xs text-gray-700 font-medium">24 Lessons</span>
-                                    <div class="flex -space-x-2">
-                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white object-cover shrink-0">
-                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white object-cover shrink-0">
+                                <div class="flex items-center justify-between mt-2 lg:mt-3">
+                                    <span class="text-[11px] text-gray-700 font-medium">24 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-white object-cover">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full border border-white object-cover">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Course Card 2 -->
-                        <div class="bg-card-course p-4 sm:p-5 rounded-2xl sm:rounded-3xl flex flex-col justify-between min-h-[200px] relative overflow-hidden">
+                        <div class="bg-card-course p-4 lg:p-4 rounded-2xl lg:rounded-3xl flex flex-col justify-between h-44 lg:h-48 relative overflow-hidden">
                             <div class="flex justify-between items-start">
-                                <span class="text-xl sm:text-2xl text-sidebar-dark"><i class="fa-solid fa-tooth"></i></span>
-                                <span class="bg-white/80 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <span class="text-xl lg:text-xl text-sidebar-dark"><i class="fa-solid fa-tooth"></i></span>
+                                <span class="bg-white/80 text-[11px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
                                     ★ 4.9
                                 </span>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=300" alt="Course" class="absolute top-4 right-4 w-20 h-16 sm:w-28 sm:h-20 object-cover rounded-xl border border-white/50 shadow-sm">
-                            <div class="mt-8 sm:mt-0">
-                                <h3 class="font-bold text-base sm:text-lg text-gray-900 leading-snug">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=300" alt="Course" class="absolute top-3.5 right-3.5 w-24 h-16 lg:w-28 lg:h-20 object-cover rounded-xl border border-white/50 shadow-sm">
+                            <div>
+                                <h3 class="font-bold text-sm lg:text-base text-gray-900 leading-snug">
                                     Digital Dentistry:<br> CAD/CAM for Retainers<br>
-                                    <span class="text-xs sm:text-sm font-normal text-gray-800">เทคโนโลยี CAD/CAM สำหรับรีเทนเนอร์</span>
+                                    <span class="text-xs font-normal text-gray-800">เทคโนโลยี CAD/CAM สำหรับรีเทนเนอร์</span>
                                 </h3>
-                                <div class="flex items-center justify-between mt-3">
-                                    <span class="text-xs text-gray-700 font-medium">16 Lessons</span>
-                                    <div class="flex -space-x-2">
-                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white object-cover shrink-0">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white object-cover shrink-0">
+                                <div class="flex items-center justify-between mt-2 lg:mt-3">
+                                    <span class="text-[11px] text-gray-700 font-medium">16 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" class="w-5 h-5 rounded-full border border-white object-cover">
+                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" class="w-5 h-5 rounded-full border border-white object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 3 -->
+                        <div class="bg-card-course p-4 lg:p-4 rounded-2xl lg:rounded-3xl flex flex-col justify-between h-44 lg:h-48 relative overflow-hidden">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xl lg:text-xl text-sidebar-dark"><i class="fa-solid fa-cubes"></i></span>
+                                <span class="bg-white/80 text-[11px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                    ★ 4.9
+                                </span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=300" alt="Course" class="absolute top-3.5 right-3.5 w-24 h-16 lg:w-28 lg:h-20 object-cover rounded-xl border border-white/50 shadow-sm">
+                            <div>
+                                <h3 class="font-bold text-sm lg:text-base text-gray-900 leading-snug">
+                                    Practical Skills:<br> All Types of Retainers<br>
+                                    <span class="text-xs font-normal text-gray-800">การทำรีเทนเนอร์ทุกประเภท</span>
+                                </h3>
+                                <div class="flex items-center justify-between mt-2 lg:mt-3">
+                                    <span class="text-[11px] text-gray-700 font-medium">30 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100" class="w-5 h-5 rounded-full border border-white object-cover">
+                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" class="w-5 h-5 rounded-full border border-white object-cover">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Card 4 -->
+                        <div class="bg-card-course p-4 lg:p-4 rounded-2xl lg:rounded-3xl flex flex-col justify-between h-44 lg:h-48 relative overflow-hidden">
+                            <div class="flex justify-between items-start">
+                                <span class="text-xl lg:text-xl text-sidebar-dark"><i class="fa-solid fa-boxes-stacked"></i></span>
+                                <span class="bg-white/80 text-[11px] font-semibold px-2 py-0.5 rounded-full flex items-center gap-1">
+                                    ★ 4.9
+                                </span>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=300" alt="Course" class="absolute top-3.5 right-3.5 w-24 h-16 lg:w-28 lg:h-20 object-cover rounded-xl border border-white/50 shadow-sm">
+                            <div>
+                                <h3 class="font-bold text-sm lg:text-base text-gray-900 leading-snug">
+                                    Advanced Techniques<br>
+                                    <span class="text-xs font-normal text-gray-800">เทคนิคขั้นสูง</span>
+                                </h3>
+                                <div class="flex items-center justify-between mt-2 lg:mt-3">
+                                    <span class="text-[11px] text-gray-700 font-medium">16 Lessons</span>
+                                    <div class="flex -space-x-1.5">
+                                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full border border-white object-cover">
+                                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100" class="w-5 h-5 rounded-full border border-white object-cover">
                                     </div>
                                 </div>
                             </div>
@@ -157,75 +215,83 @@
             </main>
 
             <!-- 3. Right Sidebar Area -->
-            <aside class="w-full lg:w-80 space-y-4 sm:space-y-6 shrink-0 bg-right-sidebar p-4 rounded-[20px] sm:rounded-[28px]">
-                <!-- Profile Card -->
+            <aside class="w-full lg:w-80 space-y-4 lg:space-y-5 shrink-0 bg-right-sidebar p-4 rounded-[20px] lg:rounded-[28px]">
+                <!-- Profile Section -->
                 <div>
-                    <div class="flex justify-between items-center mb-2">
-                        <button class="text-gray-700 hover:text-black"><i class="fa-regular fa-bell"></i></button>
-                        <button class="text-gray-700 hover:text-black"><i class="fa-solid fa-gear"></i></button>
+                    <div class="flex justify-between items-center mb-1">
+                        <button class="text-gray-700 hover:text-black"><i class="fa-regular fa-bell text-sm"></i></button>
+                        <button class="text-gray-700 hover:text-black"><i class="fa-solid fa-gear text-sm"></i></button>
                     </div>
-                    <!-- รูป Profile ใหญ่ ล็อคอัตราส่วนทรงกลม 1:1 -->
                     <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 mb-2 rounded-full overflow-hidden border-2 border-white shadow-sm shrink-0">
-                            <img src="https://images.unsplash.com/photo-1594824813566-78853b47f48a?w=150" class="w-full h-full object-cover">
-                        </div>
-                        <span class="text-xs text-gray-700 font-medium">Your Profile</span>
+                        <img src="https://images.unsplash.com/photo-1594824813566-78853b47f48a?w=150" class="w-14 h-14 rounded-full object-cover mb-1 border-2 border-white shadow-sm shrink-0">
+                        <h3 class="text-sm font-bold text-gray-900">Dr. Anantaporn</h3>
+                        <span class="text-[11px] text-gray-600 font-medium">Your Profile</span>
                     </div>
-                    <!-- Colleagues -->
-                    <div class="bg-white/60 mt-4 p-2.5 rounded-2xl flex items-center justify-between">
+                    <!-- Colleagues Button -->
+                    <div class="bg-white/60 mt-3 p-2 rounded-xl flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-user-group text-gray-600 text-sm"></i>
+                            <i class="fa-solid fa-user-group text-gray-600 text-xs"></i>
                             <span class="text-xs font-semibold text-gray-800">274 Colleagues</span>
                         </div>
                         <div class="flex items-center gap-1">
-                            <div class="flex -space-x-1.5">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full object-cover shrink-0">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full object-cover shrink-0">
+                            <div class="flex -space-x-1">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-4 h-4 rounded-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-4 h-4 rounded-full object-cover">
                             </div>
-                            <i class="fa-solid fa-chevron-right text-xs text-gray-500"></i>
+                            <i class="fa-solid fa-chevron-right text-[10px] text-gray-500"></i>
                         </div>
                     </div>
                 </div>
 
                 <!-- Activity Chart Card -->
-                <div class="bg-white p-4 rounded-2xl shadow-sm">
-                    <div class="flex justify-between items-center mb-4">
+                <div class="bg-white p-3.5 rounded-2xl shadow-sm">
+                    <div class="flex justify-between items-center mb-3">
                         <div>
-                            <span class="text-xs text-gray-500 block">Activity</span>
-                            <div class="flex items-center gap-2">
-                                <span class="text-xl sm:text-2xl font-bold text-gray-900">3.5h</span>
-                                <span class="bg-[#D3E1A0] text-gray-800 text-[10px] font-semibold px-2 py-0.5 rounded-full">👍 Practice Hours</span>
+                            <span class="text-[10px] text-gray-500 block">Activity</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="text-xl font-bold text-gray-900">3.5h</span>
+                                <span class="bg-[#D3E1A0] text-gray-800 text-[9px] font-semibold px-2 py-0.5 rounded-full">👍 Practice Hours</span>
                             </div>
                         </div>
-                        <button class="text-xs border border-gray-300 bg-white px-2 py-1 rounded-lg text-gray-600 flex items-center gap-1">
-                            Year <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                        <button class="text-[11px] border border-gray-300 bg-white px-2 py-0.5 rounded-lg text-gray-600 flex items-center gap-1">
+                            Year <i class="fa-solid fa-chevron-down text-[9px]"></i>
                         </button>
                     </div>
 
-                    <!-- Bar Chart -->
-                    <div class="flex items-end justify-between h-24 sm:h-28 pt-4 px-1">
-                        <div class="flex flex-col items-center gap-1"><div class="w-4 sm:w-5 bg-[#A1B88B] rounded-t-lg h-12 sm:h-16"></div><span class="text-[10px] text-gray-500">Jan</span></div>
-                        <div class="flex flex-col items-center gap-1"><div class="w-4 sm:w-5 bg-sidebar-dark rounded-t-lg h-16 sm:h-20"></div><span class="text-[10px] text-gray-500">Jan</span></div>
-                        <div class="flex flex-col items-center gap-1"><div class="w-4 sm:w-5 bg-[#A1B88B] rounded-t-lg h-10 sm:h-12"></div><span class="text-[10px] text-gray-500">Aug</span></div>
-                        <div class="flex flex-col items-center gap-1"><div class="w-4 sm:w-5 bg-sidebar-dark rounded-t-lg h-20 sm:h-24"></div><span class="text-[10px] text-gray-500">Sep</span></div>
-                        <div class="flex flex-col items-center gap-1"><div class="w-4 sm:w-5 bg-[#A1B88B] rounded-t-lg h-8 sm:h-10"></div><span class="text-[10px] text-gray-500">Oct</span></div>
-                        <div class="flex flex-col items-center gap-1"><div class="w-4 sm:w-5 bg-[#A1B88B]/60 rounded-t-lg h-6 sm:h-8"></div><span class="text-[10px] text-gray-500">Nov</span></div>
-                        <div class="flex flex-col items-center gap-1"><div class="w-4 sm:w-5 bg-sidebar-dark rounded-t-lg h-16 sm:h-20"></div><span class="text-[10px] bg-sidebar-dark text-white px-1 rounded">Dec</span></div>
+                    <!-- Custom Bar Chart -->
+                    <div class="flex items-end justify-between h-20 pt-2 px-0.5">
+                        <div class="flex flex-col items-center gap-1"><div class="w-4 bg-[#A1B88B] rounded-t-lg h-10"></div><span class="text-[9px] text-gray-500">Jan</span></div>
+                        <div class="flex flex-col items-center gap-1"><div class="w-4 bg-sidebar-dark rounded-t-lg h-14"></div><span class="text-[9px] text-gray-500">Jan</span></div>
+                        <div class="flex flex-col items-center gap-1"><div class="w-4 bg-[#A1B88B] rounded-t-lg h-8"></div><span class="text-[9px] text-gray-500">Aug</span></div>
+                        <div class="flex flex-col items-center gap-1"><div class="w-4 bg-sidebar-dark rounded-t-lg h-16"></div><span class="text-[9px] text-gray-500">Sep</span></div>
+                        <div class="flex flex-col items-center gap-1"><div class="w-4 bg-[#A1B88B] rounded-t-lg h-6"></div><span class="text-[9px] text-gray-500">Oct</span></div>
+                        <div class="flex flex-col items-center gap-1"><div class="w-4 bg-[#A1B88B]/60 rounded-t-lg h-4"></div><span class="text-[9px] text-gray-500">Nov</span></div>
+                        <div class="flex flex-col items-center gap-1"><div class="w-4 bg-sidebar-dark rounded-t-lg h-14"></div><span class="text-[9px] bg-sidebar-dark text-white px-1 rounded">Dec</span></div>
                     </div>
                 </div>
 
                 <!-- Your Courses Progress Section -->
                 <div>
-                    <h3 class="text-sm sm:text-base font-bold text-gray-800 mb-3">
+                    <h3 class="text-xs sm:text-sm font-bold text-gray-800 mb-2">
                         Your Courses / <span class="font-normal text-gray-600">หลักสูตรของคุณ</span>
                     </h3>
-                    <div class="space-y-3">
-                        <div class="bg-card-course p-3 rounded-2xl flex items-center gap-3">
-                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover shrink-0">
+                    <div class="space-y-2">
+                        <div class="bg-card-course p-2.5 rounded-xl flex items-center gap-2.5">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-10 h-10 rounded-lg object-cover shrink-0">
                             <div class="flex-1">
-                                <h4 class="text-xs font-bold text-gray-900 leading-tight">Wire Bending: Basic to<br><span class="font-normal text-gray-700">การดัดลวดพื้นฐานและขั้นสูง</span></h4>
-                                <div class="w-full bg-gray-300 h-1.5 rounded-full mt-2 overflow-hidden">
+                                <h4 class="text-[11px] font-bold text-gray-900 leading-tight">Wire Bending: Basic to<br><span class="font-normal text-gray-700">การดัดลวดพื้นฐานและขั้นสูง</span></h4>
+                                <div class="w-full bg-gray-300 h-1 rounded-full mt-1.5 overflow-hidden">
                                     <div class="bg-sidebar-dark h-full w-2/3 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-card-course p-2.5 rounded-xl flex items-center gap-2.5">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-10 h-10 rounded-lg object-cover shrink-0">
+                            <div class="flex-1">
+                                <h4 class="text-[11px] font-bold text-gray-900 leading-tight">Digital Dentistry: CAD/CAM<br><span class="font-normal text-gray-700">สำหรับรีเทนเนอร์</span></h4>
+                                <div class="w-full bg-gray-300 h-1 rounded-full mt-1.5 overflow-hidden">
+                                    <div class="bg-sidebar-dark h-full w-1/2 rounded-full"></div>
                                 </div>
                             </div>
                         </div>
@@ -236,11 +302,12 @@
         </div>
 
         <!-- 4. Footer Section -->
-        <footer class="bg-footer-dark text-white/80 p-4 px-6 sm:px-8 text-xs flex flex-col md:flex-row justify-between items-center gap-3 border-t border-white/10">
-            <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+        <footer class="bg-footer-dark text-white/80 p-3 px-6 lg:px-8 text-xs flex flex-col md:flex-row justify-between items-center gap-3 border-t border-white/10">
+            <div class="flex flex-wrap items-center justify-center gap-4 lg:gap-6">
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone"></i> Contact info</span>
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-envelope"></i> Resources</span>
                 <span class="flex items-center gap-1.5"><i class="fa-regular fa-user"></i> Profile</span>
+                <span class="flex items-center gap-1.5">Contact</span>
             </div>
             <div class="flex flex-wrap items-center justify-center gap-4 text-white/60">
                 <span>04182244005</span>
