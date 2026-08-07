@@ -14,7 +14,7 @@
     <style>
         body {
             font-family: 'Inter', 'Kanit', sans-serif;
-            background-color: #A2D0C1 !important;
+            background-color: #E3E8DC !important;
             color: #1F2937;
         }
         .bg-dashboard-main { background-color: #E3E8DC !important; }
@@ -28,10 +28,10 @@
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Animation สไลด์จากซ้ายไปขวา */
+        /* Animation สไลด์จากขวาไปซ้าย */
         #loginDrawer {
             transition: transform 0.3s ease-in-out;
-            transform: translateX(-100%);
+            transform: translateX(100%);
         }
         #loginDrawer.open {
             transform: translateX(0);
@@ -47,13 +47,13 @@
         }
     </style>
 </head>
-<body class="min-h-screen p-2 sm:p-4 lg:p-8 flex items-center justify-center overflow-x-hidden relative">
+<body class="min-h-screen bg-dashboard-main flex flex-col justify-between overflow-x-hidden relative">
 
-    <!-- Dashboard Container -->
-    <div class="w-full max-w-[1340px] bg-dashboard-main rounded-[24px] lg:rounded-[36px] shadow-2xl overflow-hidden flex flex-col justify-between">
+    <!-- Dashboard Container (ขยายเต็มจอ) -->
+    <div class="w-full flex-1 flex flex-col justify-between">
         
         <!-- Content Area -->
-        <div class="flex flex-col lg:flex-row p-3 lg:p-6 gap-4 lg:gap-6">
+        <div class="flex flex-col lg:flex-row p-3 lg:p-6 gap-4 lg:gap-6 flex-1">
             
             <!-- 1. Left Sidebar Navigation -->
             <aside class="w-full lg:w-[72px] bg-sidebar-dark rounded-[20px] lg:rounded-[28px] p-3 lg:py-5 lg:px-3 flex flex-row lg:flex-col items-center justify-between gap-4 shrink-0 overflow-x-auto scrollbar-hide">
@@ -97,7 +97,7 @@
 
             <!-- 2. Main Middle Area -->
             <main class="flex-1 space-y-4 lg:space-y-5 px-1">
-                <!-- Welcome Title (ไม่มี Dr. Anantaporn) -->
+                <!-- Welcome Title -->
                 <h1 class="text-2xl sm:text-3xl lg:text-[40px] font-bold text-gray-900 leading-[1.15] tracking-tight max-w-2xl pt-1">
                     Welcome to<br>
                     Online Wire Bending &<br>
@@ -232,7 +232,7 @@
                 </div>
             </main>
 
-            <!-- 3. Right Sidebar Area (ปรับเป็น Guest Profile + ปุ่ม Login) -->
+            <!-- 3. Right Sidebar Area -->
             <aside class="w-full lg:w-80 space-y-4 lg:space-y-5 shrink-0 bg-right-sidebar p-4 rounded-[20px] lg:rounded-[28px]">
                 <!-- Profile Login Section -->
                 <div>
@@ -335,7 +335,7 @@
         </div>
 
         <!-- 4. Footer Section -->
-        <footer class="bg-footer-dark text-white/80 p-3 px-6 lg:px-8 text-xs flex flex-col md:flex-row justify-between items-center gap-3 border-t border-white/10">
+        <footer class="bg-footer-dark text-white/80 p-3 px-6 lg:px-8 text-xs flex flex-col md:flex-row justify-between items-center gap-3 border-t border-white/10 w-full">
             <div class="flex flex-wrap items-center justify-center gap-4 lg:gap-6">
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone"></i> Contact info</span>
                 <span class="flex items-center gap-1.5"><i class="fa-solid fa-envelope"></i> Resources</span>
@@ -351,12 +351,12 @@
 
     </div>
 
-    <!-- 5. Slide-in Drawer (หน้าต่างเลื่อนจากซ้ายไปขวา) -->
+    <!-- 5. Slide-in Drawer (หน้าต่างเลื่อนมาจากขวาไปซ้าย) -->
     <!-- Background Overlay -->
     <div id="drawerOverlay" onclick="toggleDrawer()" class="fixed inset-0 bg-black/50 z-40"></div>
 
-    <!-- Slide Drawer Container -->
-    <div id="loginDrawer" class="fixed top-0 left-0 h-full w-full max-w-md bg-white z-50 shadow-2xl p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
+    <!-- Slide Drawer Container (อยู่ทางขวา: right-0) -->
+    <div id="loginDrawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl p-6 sm:p-8 flex flex-col justify-between overflow-y-auto">
         <div>
             <!-- Drawer Header -->
             <div class="flex justify-between items-center mb-6">
@@ -421,7 +421,7 @@
         </div>
     </div>
 
-    <!-- JavaScript สำหรับควบคุมสไลด์เปิด/ปิด Drawer -->
+    <!-- JavaScript สำหรับควบคุมการเปิด/ปิด Drawer -->
     <script>
         function toggleDrawer() {
             const drawer = document.getElementById('loginDrawer');
