@@ -17,6 +17,16 @@
             background-color: #E2E8D5;
             color: #0E151B;
         }
+
+        /* ป้องกันปัญหา Browser Auto-fill เปลี่ยนสีพื้นหลัง input เป็นสีดำหรือสีอื่น */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+            -webkit-text-fill-color: #111827 !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
     </style>
 </head>
 <body class="bg-[#E2E8D5] min-h-screen flex flex-col justify-between p-3 sm:p-4 lg:p-6 gap-4 antialiased relative overflow-x-hidden">
@@ -245,7 +255,7 @@
                 <h3 class="text-xl font-bold text-[#111812]">Guest User</h3>
                 <p class="text-xs sm:text-sm text-[#3E4E3F] mb-5 font-semibold">กรุณาเข้าสู่ระบบเพื่อเรียนต่อ</p>
 
-                <!-- Auth Buttons (Triggers Slide-over Drawer) -->
+                <!-- Auth Buttons -->
                 <div class="grid grid-cols-2 gap-3 w-full mb-4">
                     <button onclick="openAuthDrawer('login')" class="bg-[#273E2D] hover:bg-[#1C261E] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-sm transition">
                         <i class="fa-solid fa-right-to-bracket"></i> Log In
@@ -394,27 +404,26 @@
         
         <!-- Top Section & Close Button -->
         <div>
-            <div class="flex justify-between items-center mb-10">
+            <div class="flex justify-between items-center mb-12">
                 <button onclick="closeAuthDrawer()" class="text-gray-400 hover:text-black transition p-2 -ml-2 text-xl">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
-                <!-- Header Title matching design image -->
                 <h2 id="drawerMainTitle" class="text-3xl font-extrabold text-black tracking-tight">Log into</h2>
             </div>
 
             <!-- LOG IN FORM CONTENT -->
-            <div id="loginForm" class="flex flex-col gap-8 mt-6">
+            <div id="loginForm" class="flex flex-col gap-8 mt-4">
                 <!-- Email Field -->
                 <div class="flex flex-col gap-2">
                     <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">EMAIL ADDRESS</label>
-                    <input type="email" placeholder="name@example.com" class="w-full py-2.5 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                    <input type="email" placeholder="name@example.com" class="w-full py-2 bg-transparent border-b border-gray-200 text-gray-900 text-base placeholder-gray-400 focus:outline-none focus:border-black transition font-medium">
                 </div>
 
                 <!-- Password Field -->
-                <div class="flex flex-col gap-2 relative">
+                <div class="flex flex-col gap-2">
                     <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">PASSWORD</label>
                     <div class="relative w-full">
-                        <input id="loginPasswordInput" type="password" placeholder="Password" class="w-full py-2.5 pr-10 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                        <input id="loginPasswordInput" type="password" placeholder="Password" class="w-full py-2 pr-10 bg-transparent border-b border-gray-200 text-gray-900 text-base placeholder-gray-400 focus:outline-none focus:border-black transition font-medium">
                         <button type="button" onclick="togglePassword('loginPasswordInput', 'loginEyeIcon')" class="absolute right-0 top-1/2 -translate-y-1/2 text-black hover:text-gray-600 transition p-1">
                             <i id="loginEyeIcon" class="fa-regular fa-eye text-xl"></i>
                         </button>
@@ -422,31 +431,31 @@
                 </div>
 
                 <!-- Log In Action Button -->
-                <button class="w-full bg-[#EDEDED] hover:bg-[#273E2D] hover:text-white text-gray-400 font-bold py-4 text-sm tracking-wider uppercase transition mt-4 rounded-sm">
+                <button class="w-full bg-[#EDEDED] hover:bg-[#273E2D] hover:text-white text-gray-400 hover:text-white font-bold py-4 text-sm tracking-wider uppercase transition mt-6 rounded-sm">
                     LOG IN
                 </button>
             </div>
 
 
             <!-- SIGN IN (REGISTER) FORM CONTENT -->
-            <div id="signinForm" class="hidden flex flex-col gap-7 mt-6">
+            <div id="signinForm" class="hidden flex flex-col gap-7 mt-4">
                 <!-- Full Name Field -->
                 <div class="flex flex-col gap-2">
                     <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">FULL NAME</label>
-                    <input type="text" placeholder="John Doe" class="w-full py-2.5 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                    <input type="text" placeholder="John Doe" class="w-full py-2 bg-transparent border-b border-gray-200 text-gray-900 text-base placeholder-gray-400 focus:outline-none focus:border-black transition font-medium">
                 </div>
 
                 <!-- Email Field -->
                 <div class="flex flex-col gap-2">
                     <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">EMAIL ADDRESS</label>
-                    <input type="email" placeholder="name@example.com" class="w-full py-2.5 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                    <input type="email" placeholder="name@example.com" class="w-full py-2 bg-transparent border-b border-gray-200 text-gray-900 text-base placeholder-gray-400 focus:outline-none focus:border-black transition font-medium">
                 </div>
 
                 <!-- Password Field -->
-                <div class="flex flex-col gap-2 relative">
+                <div class="flex flex-col gap-2">
                     <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">CREATE PASSWORD</label>
                     <div class="relative w-full">
-                        <input id="signinPasswordInput" type="password" placeholder="Password" class="w-full py-2.5 pr-10 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                        <input id="signinPasswordInput" type="password" placeholder="Password" class="w-full py-2 pr-10 bg-transparent border-b border-gray-200 text-gray-900 text-base placeholder-gray-400 focus:outline-none focus:border-black transition font-medium">
                         <button type="button" onclick="togglePassword('signinPasswordInput', 'signinEyeIcon')" class="absolute right-0 top-1/2 -translate-y-1/2 text-black hover:text-gray-600 transition p-1">
                             <i id="signinEyeIcon" class="fa-regular fa-eye text-xl"></i>
                         </button>
@@ -454,7 +463,7 @@
                 </div>
 
                 <!-- Sign In Action Button -->
-                <button class="w-full bg-[#273E2D] hover:bg-[#1C261E] text-white font-bold py-4 text-sm tracking-wider uppercase transition mt-4 rounded-sm shadow-sm">
+                <button class="w-full bg-[#273E2D] hover:bg-[#1C261E] text-white font-bold py-4 text-sm tracking-wider uppercase transition mt-6 rounded-sm shadow-sm">
                     CREATE ACCOUNT
                 </button>
             </div>
