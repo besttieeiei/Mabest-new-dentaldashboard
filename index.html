@@ -19,7 +19,7 @@
         }
     </style>
 </head>
-<body class="bg-[#E2E8D5] min-h-screen flex flex-col justify-between p-3 sm:p-4 lg:p-6 gap-4 antialiased">
+<body class="bg-[#E2E8D5] min-h-screen flex flex-col justify-between p-3 sm:p-4 lg:p-6 gap-4 antialiased relative overflow-x-hidden">
 
     <!-- MAIN CONTAINER (3 Columns Layout) -->
     <div class="flex-1 flex flex-col lg:flex-row gap-5 xl:gap-6 w-full max-w-[1850px] mx-auto items-stretch">
@@ -66,7 +66,7 @@
         </aside>
 
 
-        <!-- 2. CENTER MAIN CONTENT (Expanded Vertically & Larger Font Sizes) -->
+        <!-- 2. CENTER MAIN CONTENT -->
         <main class="flex-1 flex flex-col justify-between gap-6 py-1">
             
             <!-- Header Section -->
@@ -77,7 +77,7 @@
                     CAD/CAM Training
                 </h1>
 
-                <!-- Filter Pills (Increased Font & Padding) -->
+                <!-- Filter Pills -->
                 <div class="flex flex-wrap gap-3 items-center pt-1">
                     <button class="bg-[#273E2D] text-white text-sm sm:text-base font-bold px-5 py-3 rounded-2xl flex items-center gap-2.5 shadow-sm">
                         <i class="fa-solid fa-border-all text-sm"></i> All
@@ -107,7 +107,7 @@
                 </span>
             </div>
 
-            <!-- Course Grid: Expanded Min-Height to fill vertical space symmetrically -->
+            <!-- Course Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 flex-1 items-stretch">
                 
                 <!-- Card 1 -->
@@ -245,12 +245,12 @@
                 <h3 class="text-xl font-bold text-[#111812]">Guest User</h3>
                 <p class="text-xs sm:text-sm text-[#3E4E3F] mb-5 font-semibold">กรุณาเข้าสู่ระบบเพื่อเรียนต่อ</p>
 
-                <!-- Auth Buttons -->
+                <!-- Auth Buttons (Triggers Slide-over Drawer) -->
                 <div class="grid grid-cols-2 gap-3 w-full mb-4">
-                    <button class="bg-[#273E2D] hover:bg-[#1C261E] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-sm transition">
+                    <button onclick="openAuthDrawer('login')" class="bg-[#273E2D] hover:bg-[#1C261E] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-sm transition">
                         <i class="fa-solid fa-right-to-bracket"></i> Log In
                     </button>
-                    <button class="bg-white hover:bg-gray-50 text-[#111812] font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-sm transition">
+                    <button onclick="openAuthDrawer('signin')" class="bg-white hover:bg-gray-50 text-[#111812] font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-sm transition">
                         <i class="fa-solid fa-user-plus"></i> Sign In
                     </button>
                 </div>
@@ -380,6 +380,164 @@
             <span class="text-white/60 text-xs">© KP Dental Labform</span>
         </div>
     </footer>
+
+
+    <!-- ========================================== -->
+    <!-- 5. SLIDE-OVER AUTH DRAWER (LOG IN / SIGN IN) -->
+    <!-- ========================================== -->
+    
+    <!-- Backdrop Overlay -->
+    <div id="drawerOverlay" onclick="closeAuthDrawer()" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <!-- Slide Panel Container -->
+    <div id="authDrawer" class="fixed top-0 right-0 h-full w-full sm:w-[450px] md:w-[480px] bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col p-8 sm:p-12 justify-between overflow-y-auto">
+        
+        <!-- Top Section & Close Button -->
+        <div>
+            <div class="flex justify-between items-center mb-10">
+                <button onclick="closeAuthDrawer()" class="text-gray-400 hover:text-black transition p-2 -ml-2 text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <!-- Header Title matching design image -->
+                <h2 id="drawerMainTitle" class="text-3xl font-extrabold text-black tracking-tight">Log into</h2>
+            </div>
+
+            <!-- LOG IN FORM CONTENT -->
+            <div id="loginForm" class="flex flex-col gap-8 mt-6">
+                <!-- Email Field -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">EMAIL ADDRESS</label>
+                    <input type="email" placeholder="name@example.com" class="w-full py-2.5 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                </div>
+
+                <!-- Password Field -->
+                <div class="flex flex-col gap-2 relative">
+                    <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">PASSWORD</label>
+                    <div class="relative w-full">
+                        <input id="loginPasswordInput" type="password" placeholder="Password" class="w-full py-2.5 pr-10 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                        <button type="button" onclick="togglePassword('loginPasswordInput', 'loginEyeIcon')" class="absolute right-0 top-1/2 -translate-y-1/2 text-black hover:text-gray-600 transition p-1">
+                            <i id="loginEyeIcon" class="fa-regular fa-eye text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Log In Action Button -->
+                <button class="w-full bg-[#EDEDED] hover:bg-[#273E2D] hover:text-white text-gray-400 font-bold py-4 text-sm tracking-wider uppercase transition mt-4 rounded-sm">
+                    LOG IN
+                </button>
+            </div>
+
+
+            <!-- SIGN IN (REGISTER) FORM CONTENT -->
+            <div id="signinForm" class="hidden flex flex-col gap-7 mt-6">
+                <!-- Full Name Field -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">FULL NAME</label>
+                    <input type="text" placeholder="John Doe" class="w-full py-2.5 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                </div>
+
+                <!-- Email Field -->
+                <div class="flex flex-col gap-2">
+                    <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">EMAIL ADDRESS</label>
+                    <input type="email" placeholder="name@example.com" class="w-full py-2.5 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                </div>
+
+                <!-- Password Field -->
+                <div class="flex flex-col gap-2 relative">
+                    <label class="text-[11px] font-extrabold text-gray-500 tracking-wider uppercase">CREATE PASSWORD</label>
+                    <div class="relative w-full">
+                        <input id="signinPasswordInput" type="password" placeholder="Password" class="w-full py-2.5 pr-10 border-b border-gray-300 text-gray-800 text-base placeholder-gray-300 focus:outline-none focus:border-black transition font-medium">
+                        <button type="button" onclick="togglePassword('signinPasswordInput', 'signinEyeIcon')" class="absolute right-0 top-1/2 -translate-y-1/2 text-black hover:text-gray-600 transition p-1">
+                            <i id="signinEyeIcon" class="fa-regular fa-eye text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sign In Action Button -->
+                <button class="w-full bg-[#273E2D] hover:bg-[#1C261E] text-white font-bold py-4 text-sm tracking-wider uppercase transition mt-4 rounded-sm shadow-sm">
+                    CREATE ACCOUNT
+                </button>
+            </div>
+        </div>
+
+        <!-- Footer Switcher Link -->
+        <div class="pt-8 border-t border-gray-100 mt-8 text-center">
+            <p id="toggleAuthText" class="text-sm text-gray-500 font-medium">
+                Don't have an account? 
+                <button onclick="switchAuthTab()" id="toggleAuthBtn" class="font-bold text-black hover:underline ml-1">Sign In</button>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT FOR INTERACTION -->
+    <script>
+        let currentMode = 'login';
+
+        function openAuthDrawer(mode = 'login') {
+            currentMode = mode;
+            updateDrawerUI();
+            
+            const drawer = document.getElementById('authDrawer');
+            const overlay = document.getElementById('drawerOverlay');
+            
+            overlay.classList.remove('pointer-events-none', 'opacity-0');
+            overlay.classList.add('opacity-100');
+            
+            drawer.classList.remove('translate-x-full');
+            drawer.classList.add('translate-x-0');
+        }
+
+        function closeAuthDrawer() {
+            const drawer = document.getElementById('authDrawer');
+            const overlay = document.getElementById('drawerOverlay');
+            
+            drawer.classList.remove('translate-x-0');
+            drawer.classList.add('translate-x-full');
+            
+            overlay.classList.remove('opacity-100');
+            overlay.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function switchAuthTab() {
+            currentMode = currentMode === 'login' ? 'signin' : 'login';
+            updateDrawerUI();
+        }
+
+        function updateDrawerUI() {
+            const mainTitle = document.getElementById('drawerMainTitle');
+            const loginForm = document.getElementById('loginForm');
+            const signinForm = document.getElementById('signinForm');
+            const toggleText = document.getElementById('toggleAuthText');
+
+            if (currentMode === 'login') {
+                mainTitle.innerText = 'Log into';
+                loginForm.classList.remove('hidden');
+                signinForm.classList.add('hidden');
+                toggleText.innerHTML = 'Don\'t have an account? <button onclick="switchAuthTab()" class="font-bold text-black hover:underline ml-1">Sign In</button>';
+            } else {
+                mainTitle.innerText = 'Create Account';
+                loginForm.classList.add('hidden');
+                signinForm.classList.remove('hidden');
+                toggleText.innerHTML = 'Already have an account? <button onclick="switchAuthTab()" class="font-bold text-black hover:underline ml-1">Log In</button>';
+            }
+        }
+
+        function togglePassword(inputId, iconId) {
+            const input = document.getElementById(inputId);
+            const icon = document.getElementById(iconId);
+            
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
 
 </body>
 </html>
