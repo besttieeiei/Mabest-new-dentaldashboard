@@ -311,172 +311,136 @@
                 </div>
             </main>
 
-           <!DOCTYPE html>
-<html lang="th" class="h-full">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Right Sidebar - UI Adjusted</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', 'Kanit', sans-serif;
-            background-color: #E2E8D5;
-            color: #0E151B;
-        }
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
-</head>
-<body class="bg-[#E2E8D5] min-h-screen p-4 flex justify-center items-center">
-
-    <!-- 3. Right Sidebar Area (โค้ดส่วนด้านขวาที่ปรับแก้เต็มระบบ) -->
-    <aside class="w-full max-w-[360px] bg-[#C2D1B2] p-5 rounded-[32px] flex flex-col gap-4 overflow-y-auto scrollbar-hide shadow-md">
-        
-        <!-- Guest User Profile Box -->
-        <div class="flex flex-col items-center w-full">
-            <div class="w-full flex justify-between items-center mb-1">
-                <button class="text-[#111812] hover:text-black transition text-lg p-1.5"><i class="fa-regular fa-bell"></i></button>
-                <button class="text-[#111812] hover:text-black transition text-lg p-1.5"><i class="fa-solid fa-gear"></i></button>
-            </div>
-            
-            <!-- User Avatar Circle -->
-            <div class="w-20 h-20 rounded-full border-2 border-white flex items-center justify-center bg-[#D3E0C3]/50 mb-2 shadow-sm shrink-0">
-                <i class="fa-solid fa-user text-3xl text-[#1C261E]"></i>
-            </div>
-            
-            <h3 class="text-lg font-bold text-[#111812] tracking-tight">Guest User</h3>
-            <p class="text-xs text-[#3E4E3F] mb-3 font-medium">กรุณาเข้าสู่ระบบเพื่อเรียนต่อ</p>
-
-            <!-- Buttons Grid -->
-            <div class="grid grid-cols-2 gap-2.5 w-full mb-3">
-                <button class="bg-[#34523C] hover:bg-[#273E2D] text-white font-bold py-2.5 px-3 rounded-2xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-sm transition">
-                    <i class="fa-solid fa-right-to-bracket text-xs"></i> Log In
-                </button>
-                <button class="bg-white hover:bg-gray-50 text-[#111812] font-bold py-2.5 px-3 rounded-2xl flex items-center justify-center gap-2 text-xs sm:text-sm shadow-sm transition">
-                    <i class="fa-solid fa-user-plus text-xs"></i> Sign In
-                </button>
-            </div>
-
-            <!-- Colleagues Card -->
-            <div class="w-full bg-white/90 backdrop-blur-sm p-3 rounded-2xl flex items-center justify-between shadow-sm border border-white/60">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-8 rounded-full bg-[#34523C]/10 flex items-center justify-center text-[#34523C] shrink-0">
-                        <i class="fa-solid fa-user-group text-xs"></i>
+            <!-- 3. Right Sidebar Area (เพิ่ม Padding และ Gap) -->
+            <aside class="w-full lg:w-[330px] xl:w-[360px] bg-[#C2D1B2] p-5 lg:p-6 rounded-[30px] lg:rounded-[36px] flex flex-col justify-between gap-5 shrink-0 overflow-y-auto scrollbar-hide shadow-sm h-full">
+                
+                <!-- Guest User Profile Box -->
+                <div class="flex flex-col items-center shrink-0">
+                    <div class="w-full flex justify-between items-center mb-2">
+                        <button class="text-[#111812] hover:text-black transition text-lg p-1"><i class="fa-regular fa-bell"></i></button>
+                        <button class="text-[#111812] hover:text-black transition text-lg p-1"><i class="fa-solid fa-gear"></i></button>
                     </div>
-                    <span class="text-xs font-bold text-[#111812]">274 Colleagues</span>
-                </div>
-                <div class="flex items-center gap-1.5">
-                    <div class="flex -space-x-2">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full object-cover border border-white">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full object-cover border border-white">
+                    
+                    <div class="w-20 h-20 sm:w-22 sm:h-22 rounded-full border-2 border-white flex items-center justify-center bg-transparent mb-2.5 shadow-sm">
+                        <i class="fa-solid fa-user text-3xl text-[#1C261E]"></i>
                     </div>
-                    <i class="fa-solid fa-chevron-right text-xs text-[#3E4E3F] ml-0.5"></i>
+                    
+                    <h3 class="text-lg font-bold text-[#111812] tracking-tight">Guest User</h3>
+                    <p class="text-xs text-[#3E4E3F] mb-3.5 font-medium">กรุณาเข้าสู่ระบบเพื่อเรียนต่อ</p>
+
+                    <div class="grid grid-cols-2 gap-3 w-full mb-3.5">
+                        <button onclick="toggleDrawer()" class="bg-[#34523C] hover:bg-[#273E2D] text-white font-bold py-2.5 px-3 rounded-2xl flex items-center justify-center gap-2 text-sm shadow-sm transition">
+                            <i class="fa-solid fa-right-to-bracket text-xs"></i> Log In
+                        </button>
+                        <button onclick="toggleDrawer()" class="bg-white hover:bg-gray-50 text-[#111812] font-bold py-2.5 px-3 rounded-2xl flex items-center justify-center gap-2 text-sm shadow-sm transition">
+                            <i class="fa-solid fa-user-plus text-xs"></i> Sign In
+                        </button>
+                    </div>
+
+                    <div class="w-full bg-white/90 backdrop-blur-sm p-3.5 rounded-2xl flex items-center justify-between shadow-sm">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-7 h-7 rounded-full bg-[#34523C]/10 flex items-center justify-center text-[#34523C]">
+                                <i class="fa-solid fa-user-group text-xs"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-bold text-[#111812]">274 Colleagues</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <div class="flex -space-x-2">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100" class="w-5 h-5 rounded-full object-cover border border-white">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" class="w-5 h-5 rounded-full object-cover border border-white">
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-xs text-[#3E4E3F] ml-0.5"></i>
+                        </div>
+                    </div>
                 </div>
-            </div>
+
+                <!-- Activity Chart Section -->
+                <div class="flex-1 bg-white/95 backdrop-blur-sm p-4.5 rounded-[24px] shadow-sm flex flex-col justify-between min-h-[160px]">
+                    <div class="flex justify-between items-center mb-2">
+                        <div>
+                            <span class="text-xs text-[#3E4E3F] block font-semibold">Activity</span>
+                            <div class="flex items-center gap-2 mt-0.5">
+                                <span class="text-xl sm:text-2xl font-bold text-[#111812]">3.5h</span>
+                                <span class="bg-[#D3E0C3] text-[#111812] text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+                                    🔥 Practice Hours
+                                </span>
+                            </div>
+                        </div>
+                        <button class="text-xs border border-gray-300 bg-white px-2.5 py-1 rounded-lg text-[#111812] flex items-center gap-1.5 shadow-sm font-bold">
+                            Year <i class="fa-solid fa-chevron-down text-[9px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- Bar Chart -->
+                    <div class="flex items-end justify-between flex-1 pt-2 pb-1 px-1 gap-1.5 min-h-[90px]">
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#B3C4A1] rounded-full h-[55%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Jan</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#34523C] rounded-full h-[80%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Jan</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#B3C4A1] rounded-full h-[45%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Aug</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#34523C] rounded-full h-[95%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Sep</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#B3C4A1] rounded-full h-[40%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Oct</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#B3C4A1]/60 rounded-full h-[30%]"></div>
+                            <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Nov</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
+                            <div class="w-full bg-[#34523C] rounded-full h-[95%] relative flex items-center justify-center overflow-hidden">
+                                <div class="absolute top-0 w-full bg-[#B3C4A1] h-[40%] rounded-t-full border-b border-[#34523C]"></div>
+                            </div>
+                            <span class="text-[10px] bg-[#34523C] text-white px-1.5 py-0.5 rounded-full font-bold shrink-0">Dec</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Your Courses List -->
+                <div class="flex-1 flex flex-col justify-between min-h-[160px]">
+                    <h3 class="text-sm sm:text-base font-bold text-[#111812] mb-2.5 shrink-0">
+                        Your Courses / <span class="font-medium text-[#3E4E3F]">หลักสูตรของคุณ</span>
+                    </h3>
+                    <div class="flex-1 flex flex-col justify-between gap-3">
+                        <div class="flex-1 bg-white/90 p-3.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
+                            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0">
+                            <div class="flex-1 min-w-0 flex flex-col justify-center">
+                                <h4 class="text-xs sm:text-sm font-bold text-[#111812] leading-tight truncate">Wire Bending: Basic to</h4>
+                                <p class="text-xs font-medium text-[#3E4E3F] truncate mt-0.5">การดัดลวดพื้นฐานและขั้นสูง</p>
+                                <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
+                                    <div class="bg-[#34523C] h-full w-3/4 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 bg-white/90 p-3.5 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
+                            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover shrink-0">
+                            <div class="flex-1 min-w-0 flex flex-col justify-center">
+                                <h4 class="text-xs sm:text-sm font-bold text-[#111812] leading-tight truncate">Digital Dentistry: CAD/CAM</h4>
+                                <p class="text-xs font-medium text-[#3E4E3F] truncate mt-0.5">สำหรับรีเทนเนอร์</p>
+                                <div class="w-full bg-gray-200 h-2 rounded-full mt-2 overflow-hidden">
+                                    <div class="bg-[#34523C] h-full w-1/2 rounded-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
         </div>
 
-        <!-- Activity Chart Section -->
-        <div class="bg-white/95 backdrop-blur-sm p-4 rounded-[24px] shadow-sm flex flex-col gap-3">
-            <div class="flex justify-between items-center">
-                <div>
-                    <span class="text-[11px] text-[#3E4E3F] block font-semibold">Activity</span>
-                    <div class="flex items-center gap-2 mt-0.5">
-                        <span class="text-2xl font-bold text-[#111812]">3.5h</span>
-                        <span class="bg-[#D3E0C3] text-[#111812] text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-                            🔥 Practice Hours
-                        </span>
-                    </div>
-                </div>
-                <button class="text-xs border border-gray-200 bg-white px-2.5 py-1 rounded-xl text-[#111812] flex items-center gap-1 shadow-sm font-bold">
-                    Year <i class="fa-solid fa-chevron-down text-[9px]"></i>
-                </button>
-            </div>
+    </div>
 
-            <!-- Bar Chart (จัดระเบียบแท่งกราฟไม่ให้ล้น) -->
-            <div class="flex items-end justify-between h-28 pt-2 pb-1 px-1 gap-1.5 w-full overflow-hidden">
-                <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
-                    <div class="w-full bg-[#B3C4A1] rounded-full h-[55%]"></div>
-                    <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Jan</span>
-                </div>
-                <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
-                    <div class="w-full bg-[#34523C] rounded-full h-[80%]"></div>
-                    <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Jan</span>
-                </div>
-                <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
-                    <div class="w-full bg-[#B3C4A1] rounded-full h-[45%]"></div>
-                    <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Aug</span>
-                </div>
-                <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
-                    <div class="w-full bg-[#34523C] rounded-full h-[95%]"></div>
-                    <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Sep</span>
-                </div>
-                <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
-                    <div class="w-full bg-[#B3C4A1] rounded-full h-[40%]"></div>
-                    <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Oct</span>
-                </div>
-                <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
-                    <div class="w-full bg-[#B3C4A1]/60 rounded-full h-[30%]"></div>
-                    <span class="text-[10px] text-[#3E4E3F] font-bold shrink-0">Nov</span>
-                </div>
-                <div class="flex flex-col items-center gap-1 flex-1 h-full justify-end">
-                    <div class="w-full bg-[#34523C] rounded-full h-[95%] relative flex items-center justify-center overflow-hidden">
-                        <div class="absolute top-0 w-full bg-[#B3C4A1] h-[40%] rounded-t-full border-b border-[#34523C]"></div>
-                    </div>
-                    <span class="text-[10px] bg-[#34523C] text-white px-1.5 py-0.5 rounded-full font-bold shrink-0">Dec</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Your Courses List (ปรับปรุงรูปและการจัดวางเนื้อหาให้อยู่ในกรอบอย่างสวยงาม) -->
-        <div class="flex flex-col gap-2">
-            <h3 class="text-sm font-bold text-[#111812]">
-                Your Courses / <span class="font-medium text-[#3E4E3F]">หลักสูตรของคุณ</span>
-            </h3>
-
-            <!-- Course Card 1 -->
-            <div class="bg-white/90 p-3 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
-                <!-- Image Container ล็อกสัดส่วนและครอปรูปให้เข้าทรง -->
-                <div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-inner bg-gray-100">
-                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=150" class="w-full h-full object-cover">
-                </div>
-                <!-- Content Area -->
-                <div class="flex-1 min-w-0 flex flex-col justify-center">
-                    <h4 class="text-xs sm:text-sm font-bold text-[#111812] leading-tight truncate">Wire Bending: Basic to</h4>
-                    <p class="text-[11px] font-medium text-[#3E4E3F] truncate mt-0.5">การดัดลวดพื้นฐานและขั้นสูง</p>
-                    <div class="w-full bg-gray-200 h-1.5 rounded-full mt-2 overflow-hidden">
-                        <div class="bg-[#34523C] h-full w-[75%] rounded-full"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course Card 2 -->
-            <div class="bg-white/90 p-3 rounded-2xl flex items-center gap-3 shadow-sm border border-white">
-                <!-- Image Container ล็อกสัดส่วนและครอปรูปให้เข้าทรง -->
-                <div class="w-14 h-14 rounded-xl overflow-hidden shrink-0 shadow-inner bg-gray-100">
-                    <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=150" class="w-full h-full object-cover">
-                </div>
-                <!-- Content Area -->
-                <div class="flex-1 min-w-0 flex flex-col justify-center">
-                    <h4 class="text-xs sm:text-sm font-bold text-[#111812] leading-tight truncate">Digital Dentistry: CAD/CAM</h4>
-                    <p class="text-[11px] font-medium text-[#3E4E3F] truncate mt-0.5">สำหรับรีเทนเนอร์</p>
-                    <div class="w-full bg-gray-200 h-1.5 rounded-full mt-2 overflow-hidden">
-                        <div class="bg-[#34523C] h-full w-[40%] rounded-full"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </aside>
-
-</body>
-</html>
     <!-- 4. Footer Section (ปรับ Margin ติดลบให้สัมพันธ์กับ Padding ใหม่ของ Body) -->
     <footer class="w-full -mx-4 sm:-mx-6 lg:-mx-8 w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+4rem)] bg-[#34523C] text-[#EAEFE2] py-3 px-6 lg:px-12 text-xs sm:text-sm font-semibold flex flex-col sm:flex-row justify-between items-center gap-3 rounded-none shrink-0 shadow-md">
         <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
